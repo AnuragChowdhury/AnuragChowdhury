@@ -1,16 +1,46 @@
-# 💫 About Me:
-A Machine Learning Engineer by training with a love for Computer Vision, NLP and Sports Analytics. Passionate about cutting-edge technology and solving real-world problems, with experience in ML and DL literatures. Skilled in Python, Deep Learning frameworks like PyTorch and Tensorflow along with Streamlit and Docker for the deployment of Machine Learning Applications through CI/CD pipelines. Strong coding ability both in producing clean and efficient code as well as debugging and understanding large code bases. Experienced use of modern source control (Git). My ikigai is learning to create and creating to learn.
+# 👋 Data Scientist & ML Engineer
 
+Building the future with AI & ML
 
-## 🌐 Socials:
-[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/anuragchowdhury) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/its.mr.anurag/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mranuragchowdhury/) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/anurag_chowdhury) 
+## 🚀 About Me
+Passionate about leveraging AI and ML to solve real-world problems. Experienced in developing end-to-end ML pipelines, from data preprocessing to model deployment. Specialized in NLP, Time Series Analysis, and MLOps.
 
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=AnuragChowdhury&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=AnuragChowdhury&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=AnuragChowdhury&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+## 🛠️ Skills
+- **Languages & Frameworks:** Python, PyTorch, TensorFlow, Scikit-learn
+- **LLM & NLP:** LangChain, HuggingFace, BERT, Transformers
+- **MLOps & Tools:** Docker, FastAPI, MLflow, Git
+- **Cloud & Databases:** AWS, PostgreSQL, Vector Databases
+- **Specialties:** Deep Learning, NLP, Time Series Analysis
+
+## 🔥 Featured Projects
+
+### LLM-Powered Chat Assistant
+Built a conversational AI using OpenAI's GPT-4 with custom knowledge base integration. Implemented RAG for enhanced context awareness.
+- 🛠️ Python, LangChain, OpenAI, Vector DB, FastAPI
+- ⭐ 128 stars | 🔄 34 forks
+
+### Time Series Forecasting Framework
+Developed a robust framework for financial market prediction using ensemble methods and deep learning models.
+- 🛠️ Python, PyTorch, Prophet, Pandas, Scikit-learn
+- ⭐ 245 stars | 🔄 89 forks
+
+### Computer Vision Object Detection Pipeline
+Implemented a real-time object detection system using YOLOv8 with custom training pipeline for industrial defect detection.
+- 🛠️ Python, PyTorch, OpenCV, YOLO, Docker
+- ⭐ 156 stars | 🔄 42 forks
+
+### Recommendation Engine
+Built a hybrid recommendation system combining collaborative filtering and content-based approaches for e-commerce platform.
+- 🛠️ Python, TensorFlow, Neo4j, FastAPI, Redis
+- ⭐ 178 stars | 🔄 51 forks
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AnuragChowdhury&show_icons=true&theme=dark)
+
+## 📫 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/anurag-chowdhury)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragChowdhury)
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=buddhism&no-frame=false&no-bg=false&margin-w=4)
