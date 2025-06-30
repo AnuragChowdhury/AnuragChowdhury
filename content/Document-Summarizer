@@ -1,0 +1,68 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMzJBaSu5x1et5LPeD4kEZP",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AnuragChowdhury/AnuragChowdhury/blob/main/content/Document-Summarizer\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TzmCrGQqzarW",
+        "outputId": "e660bc00-6281-4cd9-9bf3-02913094476c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'Document-Summarizer'...\n",
+            "remote: Enumerating objects: 75, done.\u001b[K\n",
+            "remote: Counting objects: 100% (75/75), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (59/59), done.\u001b[K\n",
+            "remote: Total 75 (delta 26), reused 0 (delta 0), pack-reused 0 (from 0)\u001b[K\n",
+            "Receiving objects: 100% (75/75), 89.22 KiB | 5.58 MiB/s, done.\n",
+            "Resolving deltas: 100% (26/26), done.\n"
+          ]
+        }
+      ],
+      "source": [
+        "!git clone https://github.com/AnuragChowdhury/Document-Summarizer.git"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "mucegoBqz9rD"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
