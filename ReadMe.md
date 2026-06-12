@@ -1,157 +1,202 @@
-# Hi there 👋, I'm Anurag Chowdhury
+ANURAG.SYS // Data Scientist · ML Engineer
 
-### Data Scientist | ML Engineer | AI Architect
 
-🎓 MSc Artificial Intelligence & Machine Learning @ Christ University
-💼 ML Engineer Intern @ Iolite Technologies
-📍 Bangalore, India
-⚽ Football Analytics Enthusiast | 📸 Hobbyist Photographer
-🌍 Open to opportunities in Netherlands 🇳🇱 | Denmark 🇩🇰 | Sweden 🇸🇪 | Spain 🇪🇸
+⚡ ANURAG.SYS // v2026
+HOME
+EXPERIENCE
+PROJECTS
+SKILLS
+STATS
+🔫 SHOOTER
+🕹️ ARCADE
+♪ AUDIO ON
 
----
 
-## 🚀 About Me
 
-* 🤖 Building AI systems powered by Machine Learning, LLMs, Computer Vision, and Graph AI
-* 🎰 Passionate about Gaming Analytics, Player Behavior Modeling, and Fraud Detection
-* 📊 Experienced in Time Series Forecasting, Predictive Analytics, and Recommendation Systems
-* ⚡ NVIDIA CUDA Certified with interests in Accelerated Computing
-* ⚽ Exploring Sports Analytics and Football Intelligence Systems
+DATA SCIENTIST · ML ENGINEER · GRAPH AI · SPORTS ANALYTICS
+BANGALORE · KOLKATA · TARGETING EU 🇳🇱 🇩🇰 🇸🇪 🇪🇸
 
----
 
-## 🛠️ Tech Stack
+ONLINE
+ANURAG.SYS v2026.1
+// DATA SCIENTIST// ML ENGINEER// COMPUTER VISION
+// NLP SPECIALIST// GRAPH AI// SPORTS ANALYTICS
+// PYTHON EXPERT// PYTORCH// LANGCHAIN
+// DATA SCIENTIST// ML ENGINEER// COMPUTER VISION
+// NLP SPECIALIST// GRAPH AI// SPORTS ANALYTICS
+// PYTHON EXPERT// PYTORCH// LANGCHAIN
+![Anurag Chowdhury](https://avatars.githubusercontent.com/u/23507323?v=4)
+LINKEDIN ↗
+GITHUB ↗
+ANURAG CHOWDHURY ▋
+// DATA SCIENTIST · ML ENGINEER · AI ARCHITECT
+⚙️ CURRENT Iolite Technologies — ML Engineer Intern
+🎓 EDU MSc AI & ML · Christ University, Bangalore (2025–27)
+🏢 PREV TCS · HSBC Data Processing Centre
+📍 BASE Bangalore / Kolkata, India
+🎯 TARGET EU Roles — 🇳🇱 Netherlands · 🇩🇰 Denmark · 🇸🇪 Sweden · 🇪🇸 Spain
+⚽ SPORT Football Analyst · Hobbyist Photographer
+MACHINE LEARNING92%
+DEEP LEARNING88%
+NLP / LLMs85%
+COMPUTER VISION80%
+GRAPH AI87%
+SPORTS ANALYTICS90%
+IMPACT METRICS // LIVE
+🎰 PLAYERPULSE
+1M+
+spins/sec · Monte Carlo Engine · 68.5% XGBoost churn accuracy · 40% lower churn via A/B framework
+LIVE ↗
+CODE ↗
+🛡️ SENTINELX
+98%
+F1-Score · GAT + XGBoost · 0.5ms latency · 1,500+ players · $25K+ weekly revenue protection
+LIVE ↗
+CODE ↗
+📊 IMPACT STATS
+30%
++30% decision efficiency (Iolite) · –60% processing time (OCR) · RMSE 0.4 (HSBC stocks) · –30% PO errors (TCS)
+EXPERIENCE LOG // CAREER TIMELINE
+OCT 2025 – PRESENT
+ML Engineer Intern
+🏢 Iolite Technologies, Bangalore
+→ Built Admission Analytics dashboard improving decision efficiency by ~30%  
+→ Developed autonomous marks verification system: Mistral OCR3 + GPT-4  
+→ Reduced manual processing time by ~60%
+LangChainGPT-4MistralFastAPI
+JAN 2023 – MAY 2023
+Data Analyst Intern
+🏦 HSBC Data Processing Centre, Bangalore
+→ Built stock price prediction models for HSBC trading desks  
+→ Achieved RMSE of 0.4 on financial time-series forecasting
+PythonLSTMPandasTime Series
+JUL 2019 – AUG 2020
+Assistant System Engineer (ML)
+💼 Tata Consultancy Services, Bangalore
+→ Reduced purchase order errors by 30% using a recommendation engine  
+→ Designed data pipeline supporting growth to 100,000 DAUs
+PythonMLETLScikit-learn
+EDUCATION // DEGREE STACK
+🎓 MSc AI & Machine Learning
+Christ (Deemed to be University), Bangalore  
+2025 – 2027 · CGPA: 3.55/4.0
+📊 MSc Data Science
+Christ University, Bangalore  
+2021 – 2023 · CGPA: 3.55/4.0
+💻 B.Tech Computer Science Engineering
+Christ University, Bangalore  
+2015 – 2019 · CGPA: 9.45/10.0
+PROJECT ARSENAL // DEPLOYED
+🎮 PlayerPulse
+Gaming Analytics Intelligence Platform.
+Monte Carlo Engine: 1M+ spins in <2s  
+XGBoost Churn Model: 68.5% accuracy  
+A/B Testing: 40% lower churn observed
+Monte CarloXGBoostPythonStreamlitFastAPI
+🎰 LIVE DEMO ↗
+GITHUB ↗
+🛡️ SentinelX
+Graph AI Fraud Intelligence Platform.
+F1-Score: 98% · Latency: 0.5ms  
+Architecture: GAT + XGBoost + Anomaly  
+Coverage: 1,500+ players · $25K+/week
+PyTorch GeometricGNNXGBoostStreamlit
+🔐 LIVE DEMO ↗
+GITHUB ↗
+⚽ FIFA Player Analysis
+ML clustering, valuation models, and positional analysis on FIFA datasets.
+JupyterScikit-learnMatplotlib
+GITHUB ↗
+🌍 Earthquake Prediction
+Seismic event prediction using ML regression models on geological datasets.
+PythonJupyterSklearn
+GITHUB ↗
+📄 Document Summarizer
+NLP summarization app using HuggingFace Transformers + Streamlit. Upload → summarize instantly.
+HuggingFaceBERTStreamlit
+GITHUB ↗
+SKILL MATRIX // TECH STACK
+TECH ARSENAL
+Python
+NumPy
+Pandas
+PyTorch
+TensorFlow
+Scikit-learn
+HuggingFace
+LangChain
+LangGraph
+OpenCV
+FastAPI
+Streamlit
+Docker
+MLflow
+SQL
+PyG / GNN
+XGBoost
+CUDA
+Monte Carlo
+NLP
+Computer Vision
+Graph AI
+LLMs
+Sports Analytics
+CERTIFICATIONS // VERIFIED
+[🟢 NVIDIA
+Fundamentals of Accelerated Computing with CUDA Python](https://learn.nvidia.com/certificates?id=waHV-I1YTV6XqROD5MgDsg)
+[🔵 DATACAMP
+Developing LLM Applications with LangChain](https://www.datacamp.com/completed/statement-of-accomplishment/course/b7b0789899a43ed722c7a6f53ec0a3ae73e0d39a)
+[🔵 DATACAMP
+Time Series Analysis in Python](https://www.datacamp.com/completed/statement-of-accomplishment/course/2407d9fd28baa81bd8dc1fd351f707b3eb866b8e)
+[🔴 INTERNSHALA
+Python for Data Science](https://drive.google.com/file/d/1FkFKjZRub96ek9BZ5SDP5LlQ5_xrrLLE/view)
+ANALYTICS TOWER // GITHUB STATS
+0
+REPOS
+0
+YEARS IN TECH
+0%
+SENTINELX F1-SCORE
+0
+DEGREES EARNED
+EXPERIENCE TIMELINE
+SKILL DOMAIN BREAKDOWN
+DRONE DEFENSE // SHOOTER GAME
+Destroy incoming data drones. Defend the model. Click/tap to fire.
+SCORE: 0
+WAVE: 1
+LIVES: ❤️❤️❤️
+HI-SCORE: 0
+CLICK TO START
+CLICK/TAP ANYWHERE ON CANVAS TO FIRE · ENERGY RECHARGES OVER TIME
 
-### Languages
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-
-### Machine Learning & AI
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge\&logo=pytorch\&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge\&logo=tensorflow\&logoColor=white)
-![Scikit Learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge\&logo=scikitlearn\&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-AA0000?style=for-the-badge)
-
-### LLM & GenAI
-
-![LangChain](https://img.shields.io/badge/LangChain-00A67E?style=for-the-badge)
-![LangGraph](https://img.shields.io/badge/LangGraph-111111?style=for-the-badge)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge\&logo=openai)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge\&logo=huggingface\&logoColor=black)
-
-### Data & Deployment
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
-![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge)
-
----
-
-## 💼 Experience
-
-### ML Engineer Intern | Iolite Technologies
-
-**Oct 2025 – Present**
-
-* Built an AI-powered Admission Analytics Dashboard improving decision efficiency by **30%**
-* Developed autonomous Marks Verification System using **Mistral OCR + GPT-4**
-* Reduced manual verification effort by **60%**
-
-### Data Analyst Intern | HSBC Data Processing Centre
-
-* Developed stock prediction models for trading analytics
-* Achieved **RMSE 0.4** on financial forecasting models
-
-### Assistant System Engineer | Tata Consultancy Services
-
-* Reduced purchase order errors by **30%** using ML-based recommendation systems
-* Designed scalable data pipelines supporting **100K+ DAUs**
-
----
-
-## 🎯 Featured Projects
-
-### 🎰 PlayerPulse
-
-Gaming Analytics & Churn Intelligence Platform
-
-* Monte Carlo slot simulation engine processing **1M+ spins in <2s**
-* XGBoost-based player churn prediction
-* RTP, volatility, and hit-frequency optimization
-* A/B testing framework reducing churn by **40%**
-
-🔗 https://github.com/AnuragChowdhury/PlayerPulse
-
----
-
-### 🛡️ SentinelX
-
-Graph AI Fraud Detection Platform
-
-* **98% F1 Score**
-* Graph Attention Networks + XGBoost
-* Fraud detection latency under **0.5 ms**
-* Revenue protection exceeding **$25K/week**
-
-🔗 https://github.com/AnuragChowdhury/SentinelX-Fraud-Platform
-
----
-
-### 📄 AI Marks Verification System
-
-* Mistral OCR 3 + GPT-4 powered autonomous verification
-* End-to-end admission document validation
-* Reduced manual review workload by **60%**
-
----
-
-### ⚽ FIFA Player Analytics
-
-* Player clustering and valuation modeling
-* Football performance analytics and scouting insights
-
----
-
-## 📜 Certifications
-
-🏆 NVIDIA Fundamentals of Accelerated Computing with CUDA Python
-
-🏆 Developing LLM Applications with LangChain (DataCamp)
-
-🏆 Time Series Analysis in Python (DataCamp)
-
-🏆 Python for Data Science (Internshala)
-
----
-
-## 📈 GitHub Stats
-
-```md
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=AnuragChowdhury&show_icons=true&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AnuragChowdhury&layout=compact&theme=tokyonight)
-
-![GitHub Streak](https://streak-stats.demolab.com?user=AnuragChowdhury&theme=tokyonight)
-```
-
----
-
-## 🌱 Currently Working On
-
-* PlayerPulse 2.0 — Advanced Gaming Analytics Platform
-* AI-Powered Admission Intelligence Suite
-* Sports Analytics & Football Intelligence Models
-* Explainable AI Research for Gaming Systems
-
----
-
-## 📫 Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anurag%20Chowdhury-blue?style=for-the-badge\&logo=linkedin)](https://linkedin.com/in/mranuragchowdhury)
-
-[![GitHub](https://img.shields.io/badge/GitHub-AnuragChowdhury-black?style=for-the-badge\&logo=github)](https://github.com/AnuragChowdhury)
-
-⭐ *Building intelligent systems that turn data into decisions.*
+🕹️ GALAGA CONTRIBUTION GAME // COMMIT GRID ASSAULT
+Every square is a real GitHub commit. Watch the ship hunt them all down.
+⬜ No commits
+▪ 1–3 commits
+▪ 4–9 commits
+▪ 10–19 commits
+▪ 20+ commits
+◈ GALAGA CONTRIBUTION ASSAULT
+YEAR 2026
+AUTOPLAY ▶
+Generated with galaga-contribution-graph on Wed Jun 10 2026 15:28:00 GMT+0530 (India Standard Time)JunJulAugSepOctNovDecJanFebMarAprMayJun
+PILOT: ANURAG CHOWDHURY // ML ENGINEER
+LOADING COMMITS...
+GITHUB ↗
+🎰
+PlayerPulse  
+1M+ spins/sec
+🛡️
+SentinelX  
+98% F1-Score
+⚽
+Football Analytics  
+Target: EU 🇳🇱 🇩🇰
+🧠
+MSc AI & ML  
+Christ University
+🎮 PLAYERPULSE ↗
+🛡️ SENTINELX ↗
+💼 LINKEDIN ↗
