@@ -263,7 +263,7 @@ class SentinelX:
 
 | Cert | Issuer | Link |
 |------|--------|------|
-| 🟢 Fundamentals of Accelerated Computing with CUDA Python | **NVIDIA** | [<img src="[https://www.vecteezy.com/vector-art/20190699-nvidia-logo-vector-nvidia-icon-free-vector](https://avatars.githubusercontent.com/u/287038291?s=200&v=4)">](https://learn.nvidia.com/certificates?id=waHV-I1YTV6XqROD5MgDsg) |
+| 🟢 Fundamentals of Accelerated Computing with CUDA Python | <img src="https://avatars.githubusercontent.com/u/287038291?s=200&v=4"> | [View ↗](https://learn.nvidia.com/certificates?id=waHV-I1YTV6XqROD5MgDsg) |
 | 🔵 Developing LLM Applications with LangChain | **DataCamp** | [View ↗](https://www.datacamp.com/completed/statement-of-accomplishment/course/b7b0789899a43ed722c7a6f53ec0a3ae73e0d39a) |
 | 🔵 Time Series Analysis in Python | **DataCamp** | [View ↗](https://www.datacamp.com/completed/statement-of-accomplishment/course/2407d9fd28baa81bd8dc1fd351f707b3eb866b8e) |
 | 🔴 Python for Data Science | **Infosys Springboard** | [View ↗](https://drive.google.com/file/d/1FkFKjZRub96ek9BZ5SDP5LlQ5_xrrLLE/view) |
