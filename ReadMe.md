@@ -61,27 +61,25 @@ anurag = {
 `LangChain` `GPT-4` `Mistral` `FastAPI`
  
 </td>
+<td width="33%" valign="top">
 ### 🏦 HSBC Data Processing Centre
 **Data Analyst Intern**
 `Jan 2023 – May 2023`
-
+ 
 - 📈 Stock price prediction for HSBC
 - 🎯 **RMSE of 0.4** on financial time-series
-
 `Python` `LSTM` `Pandas` `Time Series`
-
+ 
 </td>
 <td width="33%" valign="top">
-
 ### 💼 Tata Consultancy Services
 **Asst. System Engineer (ML)**
 `Jul 2019 – Aug 2020`
-
+ 
 - 🔧 Recommendation engine → **−30% PO errors**
 - 🚀 Pipeline scaling to **100K DAUs**
-
 `Python` `Scikit-learn` `ETL` `ML`
-
+ 
 </td>
 </tr>
 </table>
