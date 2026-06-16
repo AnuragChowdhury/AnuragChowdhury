@@ -50,12 +50,16 @@ anurag = {
 ## ⚡ `EXPERIENCE LOG // CAREER TIMELINE`
 
 <table>
-<td width="33%" valign="top"> ### Iolite Technologies    
-**ML Engineer Intern** 
-`Oct 2025 – Present` 
-- 📊 Admission Analytics → **+30% decision efficiency** 
-- 🧠 Mistral OCR3 + GPT-4 marks verification → **−60% processing time** LangChain GPT-4 Mistral FastAPI </td>
-<td width="33%" valign="top">
+<td width="33%" valign="top"> <b>Iolite Technologies</b><br>
+
+**ML Engineer Intern**  
+`Oct 2025 – Present`
+
+- 📊 Built an **Admission Analytics** system, improving decision-making efficiency by **30%**.
+- 🧠 Developed an automated **marks verification** pipeline using **Mistral OCR3** and **GPT-4**, reducing processing time by **60%**.
+
+**Tech Stack:**  
+`LangChain` `GPT-4` `Mistral OCR3` `FastAPI`
 
 ### 🏦 HSBC Data Processing Centre
 **Data Analyst Intern**
