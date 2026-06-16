@@ -1,37 +1,41 @@
 name: 🕹️ Galaga Contribution Game
 
+# This workflow keeps the arcade-contributions.svg fresh.
+# The SVG was manually generated using galaga-contribution-graph locally
+# and committed to the repo root. This workflow re-generates it daily
+# using the snake animation engine as a fallback since the galaga npm
+# package is not publicly available. To regenerate with real Galaga style:
+# run locally: npx galaga-contribution-graph --username AnuragChowdhury --token <PAT>
+
 on:
   schedule:
-    - cron: "0 2 * * *"      # daily at 02:00 UTC (after snake + 3D)
+    - cron: "0 2 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js 20
-        uses: actions/setup-node@v4
+      # Re-generate using the snake SVG engine with custom orange palette
+      # matching the Galaga colour scheme (orange ship, dark grid)
+      - name: Generate arcade-style contribution SVG
+        uses: Platane/snk/svg-only@v3
         with:
-          node-version: "20"
+          github_user_name: AnuragChowdhury
+          outputs: |
+            arcade-contributions.svg?palette=github-dark&color_snake=ff6b35
 
-      - name: Generate Galaga arcade SVG
-        run: npx --yes galaga-contribution-graph \
-               --username AnuragChowdhury \
-               --token ${{ secrets.GITHUB_TOKEN }} \
-               --output arcade-contributions.svg
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit & push arcade SVG
+      - name: Commit & push
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
           git add arcade-contributions.svg
-          git diff --staged --quiet || git commit -m "🕹️ Update Galaga arcade game [skip ci]"
+          git diff --staged --quiet || git commit -m "🕹️ Update arcade contributions [skip ci]"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
