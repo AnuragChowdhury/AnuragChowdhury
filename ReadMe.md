@@ -50,7 +50,11 @@ anurag = {
 ## ⚡ `EXPERIENCE LOG // CAREER TIMELINE`
 
 <table>
-<td width="33%" valign="top"> <img src="https://media.licdn.com/dms/image/v2/C560BAQFIh1xLwohLaw/company-logo_200_200/company-logo_200_200/0/1630638551886/iolite_technologies_official_logo?e=2147483647&v=beta&t=yR8OHt5pj8Oat3eVU2dAL6JAoMpj_yRpxvPUpMpPJWs" style="width:30px; height:auto;">  ### Iolite Technologies **ML Engineer Intern** Oct 2025 – Present - 📊 Admission Analytics → **+30% decision efficiency** - 🧠 Mistral OCR3 + GPT-4 marks verification → **−60% processing time** LangChain GPT-4 Mistral FastAPI </td>
+<td width="33%" valign="top"> ### Iolite Technologies <img src="https://media.licdn.com/dms/image/v2/C560BAQFIh1xLwohLaw/company-logo_200_200/company-logo_200_200/0/1630638551886/iolite_technologies_official_logo?e=2147483647&v=beta&t=yR8OHt5pj8Oat3eVU2dAL6JAoMpj_yRpxvPUpMpPJWs" style="width:30px; height:auto;">   
+**ML Engineer Intern** 
+`Oct 2025 – Present` 
+- 📊 Admission Analytics → **+30% decision efficiency** 
+- 🧠 Mistral OCR3 + GPT-4 marks verification → **−60% processing time** LangChain GPT-4 Mistral FastAPI </td>
 <td width="33%" valign="top">
 
 ### 🏦 HSBC Data Processing Centre
