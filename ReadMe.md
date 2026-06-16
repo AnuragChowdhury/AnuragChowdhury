@@ -51,7 +51,8 @@ anurag = {
 
 <table>
 <tr>
-<td width="33%" valign="top"><br/>
+<td width="33%" valign="top">
+    
 ### 🤖 Iolite Technologies
 **ML Engineer Intern**
 `Oct 2025 – Present`
@@ -62,6 +63,7 @@ anurag = {
  
 </td>
 <td width="33%" valign="top">
+    
 ### 🏦 HSBC Data Processing Centre
 **Data Analyst Intern**
 `Jan 2023 – May 2023`
