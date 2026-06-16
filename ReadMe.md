@@ -13,8 +13,6 @@
 <!-- SOCIAL BADGES -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mranuragchowdhury)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragChowdhury)
-[![PlayerPulse](https://img.shields.io/badge/🎰_PlayerPulse-LIVE-FF4B4B?style=for-the-badge)](https://playerpulse-slot-anurag.netlify.app/simulator)
-[![SentinelX](https://img.shields.io/badge/🛡️_SentinelX-LIVE-C0392B?style=for-the-badge)](https://anuragchowdhury-sentinelx-fraud-platform-app-987wck.streamlit.app/)
 [![Recommendation](https://img.shields.io/badge/Recommendation-Certificate-34A853?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1MjwRGvvM0wCrxNiCh9-pxKZBPOgUP73j/view)
 [![Profile Views](https://komarev.com/ghpvc/?username=AnuragChowdhury&color=FF6B35&style=for-the-badge&label=PROFILE+VIEWS)](https://github.com/AnuragChowdhury)
 
@@ -55,7 +53,8 @@ anurag = {
 <tr>
 <td width="33%" valign="top">
 
-### 🤖 Iolite Technologies
+### 🤖 Iolite Technologies 
+<img src="https://media.licdn.com/dms/image/v2/C560BAQFIh1xLwohLaw/company-logo_200_200/company-logo_200_200/0/1630638551886/iolite_technologies_official_logo?e=2147483647&v=beta&t=yR8OHt5pj8Oat3eVU2dAL6JAoMpj_yRpxvPUpMpPJWs" style="width:30px; height:auto;">
 **ML Engineer Intern**
 `Oct 2025 – Present`
 
