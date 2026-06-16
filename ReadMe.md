@@ -51,7 +51,7 @@ anurag = {
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="33%" valign="top"><br/>
 ### 🤖 Iolite Technologies
 **ML Engineer Intern**
 `Oct 2025 – Present`
