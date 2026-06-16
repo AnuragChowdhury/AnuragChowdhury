@@ -53,8 +53,7 @@ anurag = {
 <tr>
 <td width="33%" valign="top">
 
-### 🤖 Iolite Technologies 
-<img src="https://media.licdn.com/dms/image/v2/C560BAQFIh1xLwohLaw/company-logo_200_200/company-logo_200_200/0/1630638551886/iolite_technologies_official_logo?e=2147483647&v=beta&t=yR8OHt5pj8Oat3eVU2dAL6JAoMpj_yRpxvPUpMpPJWs" style="width:30px; height:auto;">
+<img src="https://media.licdn.com/dms/image/v2/C560BAQFIh1xLwohLaw/company-logo_200_200/company-logo_200_200/0/1630638551886/iolite_technologies_official_logo?e=2147483647&v=beta&t=yR8OHt5pj8Oat3eVU2dAL6JAoMpj_yRpxvPUpMpPJWs" style="width:30px; height:auto;">### 🤖 Iolite Technologies 
 **ML Engineer Intern**
 `Oct 2025 – Present`
 
