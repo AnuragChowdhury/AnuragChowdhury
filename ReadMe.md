@@ -12,7 +12,7 @@
 
 <!-- SOCIAL BADGES -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mranuragchowdhury)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragChowdhury)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragChowdhury)<br/>
 [![Recommendation](https://img.shields.io/badge/Recommendation-Certificate-34A853?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1MjwRGvvM0wCrxNiCh9-pxKZBPOgUP73j/view)
 [![Profile Views](https://komarev.com/ghpvc/?username=AnuragChowdhury&color=FF6B35&style=for-the-badge&label=PROFILE+VIEWS)](https://github.com/AnuragChowdhury)
 
