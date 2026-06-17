@@ -5,7 +5,9 @@
 
 <!-- TYPING ANIMATION -->
 <a href="https://github.com/AnuragChowdhury">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1000&color=FF6B35&center=true&vCenter=true&random=false&width=700&lines=⚡+ANURAG.SYS+v2026+ONLINE;Data+Scientist+%26+ML+Engineer;Graph+AI+%7C+NLP+%7C+Computer+Vision+%7C+LLMs;Football+Analytics+%E2%9A%BD+%7C+Sports+AI;Targeting+EU+%F0%9F%87%B3%F0%9F%87%B1+%F0%9F%87%A9%F0%9F%87%B0+%F0%9F%87%B8%F0%9F%87%AA+%F0%9F%87%AA%F0%9F%87%B8;Powered+by+Python+%C2%B7+PyTorch+%C2%B7+LangChain+%C2%B7+CUDA" alt="Typing SVG"/>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1000&color=FF6B35&center=true&vCenter=true&random=false&width=700&lines=⚡+ANURAG.SYS+v2026+ONLINE;Data+Scientist+%26+ML+Engineer;Graph+AI+%7C+NLP+%7C+Computer+Vision+%7C+LLMs;Football+Analytics+⚽+%7C+Sports+AI;Targeting+EU+🇳🇱+🇩🇰+🇸🇪+🇪🇸;Powered+by+Python+·+PyTorch+·+LangChain+·+CUDA" alt="Typing SVG" />
+</p>
 </a>
 
 <br/>
