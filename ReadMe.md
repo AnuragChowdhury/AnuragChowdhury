@@ -221,17 +221,17 @@ class SentinelX:
 
 ## 🏆 `TROPHY SHELF`
 
-<div align="center">
 
-[![Trophies]([https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=radical&no-frame=true&margin-w=4&column=7](https://trophygithubreadmelang.cybee.dpdns.org/?username=AnuragChowdhury&theme=discord))](https://github.com/AnuragChowdhury)
 
-</div>
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15&margin-h=15&column=4" />
+</p>
 
 ---
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🎓 `CERTIFICATIONS // VERIFIED`
+## 🎓 `CERTIFICATIONS `
 
 | Cert | Issuer | Link |
 |------|--------|------|
