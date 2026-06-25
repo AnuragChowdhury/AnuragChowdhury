@@ -32,7 +32,6 @@ anurag = {
     "name"       : "Anurag Chowdhury",
     "role"       : ["Data Scientist", "ML Engineer", "AI Architect"],
     "location"   : "Bangalore / Kolkata, India",
-    "target"     : "EU Roles — 🇳🇱 Netherlands · 🇩🇰 Denmark · 🇸🇪 Sweden · 🇪🇸 Spain",
     "current"    : "ML Engineer Intern @ Iolite Technologies",
     "education"  : [
         "MSc AI & ML   — Christ University (2025–27)  · CGPA 3.55/4.0",
@@ -135,9 +134,10 @@ class SentinelX:
 
 ### 📂 More Repositories
 
-[![Fifa Analysis](https://github-readme-stats.vercel.app/api/pin/?username=AnuragChowdhury&repo=Fifa_player_analysis&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury/Fifa_player_analysis)
+[![SmartRecipeAssistant](https://github-readme-stats.vercel.app/api/pin/?username=AnuragChowdhury&repo=SmartRecipeAssistant&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury/SmartRecipeAssistant)
 [![Earthquake Prediction](https://github-readme-stats.vercel.app/api/pin/?username=AnuragChowdhury&repo=Earthquake_prediction&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury/Earthquake_prediction)
 [![Document Summarizer](https://github-readme-stats.vercel.app/api/pin/?username=AnuragChowdhury&repo=Document-Summarizer&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury/Document-Summarizer)
+[![Pose-Estimation-OpenPose](https://github-readme-stats.vercel.app/api/pin/?username=AnuragChowdhury&repo=Pose-Estimation-OpenPose&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury/Pose-Estimation-OpenPose)
 
 ---
 
@@ -150,7 +150,7 @@ class SentinelX:
 ![Python](https://img.shields.io/badge/Python-Expert-3776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Advanced-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![R](https://img.shields.io/badge/R-Intermediate-276DC3?style=flat-square&logo=r&logoColor=white)
-![Java](https://img.shields.io/badge/Java-Intermediate-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+
 
 **ML / DL**
 
