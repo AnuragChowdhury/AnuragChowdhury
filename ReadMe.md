@@ -186,7 +186,7 @@ class SentinelX:
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AnuragChowdhury&show_icons=true&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&icon_color=C0392B&text_color=ffffff)](https://github.com/AnuragChowdhury)
+[![trophy](https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=discord)]([https://github.com/AnuragChowdhury/github-profile-trophy](https://trophygithubreadmelang.cybee.dpdns.org/?username=AnuragChowdhury&theme=discord))
 [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AnuragChowdhury&layout=donut&theme=radical&hide_border=true&bg_color=0D0D0D&title_color=FF6B35&text_color=ffffff)](https://github.com/AnuragChowdhury)
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=AnuragChowdhury&theme=radical&hide_border=true&background=0D0D0D&stroke=FF6B35&ring=C0392B&fire=FF6B35&currStreakLabel=ffffff)](https://github.com/AnuragChowdhury)
