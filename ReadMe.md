@@ -1,10 +1,11 @@
 <div align="center">
 
 <!-- ═══════════ PIXEL LED BANNER via capsule-render ═══════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:050505,100:0a0a0a&height=120&text=ANURAG%20CHOWDHURY&fontColor=FF6B35&fontSize=42&fontAlignY=55&desc=DATA%20SCIENTIST%20%C2%B7%20ML%20ENGINEER%20%C2%B7%20GRAPH%20AI%20%C2%B7%20SPORTS%20ANALYTICS&descFontColor=C0392B&descSize=13&descAlignY=78&stroke=C0392B&strokeWidth=1" width="100%"/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif" width="50%" height="650px" alt="Coding Animation"/>
 </p>
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:050505,100:0a0a0a&height=120&text=ANURAG%20CHOWDHURY&fontColor=FF6B35&fontSize=42&fontAlignY=55&desc=DATA%20SCIENTIST%20%C2%B7%20ML%20ENGINEER%20%C2%B7%20GRAPH%20AI%20%C2%B7%20SPORTS%20ANALYTICS&descFontColor=C0392B&descSize=13&descAlignY=78&stroke=C0392B&strokeWidth=1" width="100%"/>
 
 <!-- TYPING ANIMATION -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1000&color=FF6B35&center=true&vCenter=true&random=false&width=700&lines=%E2%9A%A1+ONLINE;Data+Scientist+%26+ML+Engineer;Graph+AI+%7C+NLP+%7C+Computer+Vision+%7C+LLMs;Football+Analytics+%E2%9A%BD+%7C+Sports+AI;Powered+by+Python+%C2%B7+PyTorch+%C2%B7+LangChain+%C2%B7+CUDA)](https://git.io/typing-svg)
