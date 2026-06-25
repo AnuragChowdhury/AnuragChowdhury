@@ -182,7 +182,7 @@ class SentinelX:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-##  `ANALYTICS TOWER // GITHUB STATS`
+##  `GITHUB STATS`
 
 <div align="center">
 
@@ -201,23 +201,11 @@ class SentinelX:
 
 ---
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-
-## 🐍 `CONTRIBUTION SNAKE`
-
-<div align="center">
-
-[![Snake dark](https://raw.githubusercontent.com/AnuragChowdhury/AnuragChowdhury/snake/github-snake-dark.svg)](https://github.com/AnuragChowdhury)
-
-</div>
-
----
-
 
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🕹️ `GALAGA CONTRIBUTION GAME`
+
 
 > Every square is a real GitHub commit. The ship hunts them all down — column by column.
 
@@ -235,7 +223,7 @@ class SentinelX:
 
 <div align="center">
 
-[![Trophies](https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=radical&no-frame=true&margin-w=4&column=7)](https://github.com/AnuragChowdhury)
+[![Trophies]([https://github-profile-trophy.vercel.app/?username=AnuragChowdhury&theme=radical&no-frame=true&margin-w=4&column=7](https://trophygithubreadmelang.cybee.dpdns.org/?username=AnuragChowdhury&theme=discord))](https://github.com/AnuragChowdhury)
 
 </div>
 
