@@ -4,7 +4,7 @@
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:050505,100:0a0a0a&height=120&text=ANURAG%20CHOWDHURY&fontColor=FF6B35&fontSize=42&fontAlignY=55&desc=DATA%20SCIENTIST%20%C2%B7%20ML%20ENGINEER%20%C2%B7%20GRAPH%20AI%20%C2%B7%20SPORTS%20ANALYTICS&descFontColor=C0392B&descSize=13&descAlignY=78&stroke=C0392B&strokeWidth=1" width="100%"/>
 
 <!-- TYPING ANIMATION -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1000&color=FF6B35&center=true&vCenter=true&random=false&width=700&lines=%E2%9A%A1+ONLINE;Data+Scientist+%26+ML+Engineer;Graph+AI+%7C+NLP+%7C+Computer+Vision+%7C+LLMs;Football+Analytics+%E2%9A%BD+%7C+Sports+AI;Targeting+EU+%F0%9F%87%B3%F0%9F%87%B1+%F0%9F%87%A9%F0%9F%87%B0+%F0%9F%87%B8%F0%9F%87%AA+%F0%9F%87%AA%F0%9F%87%B8;Powered+by+Python+%C2%B7+PyTorch+%C2%B7+LangChain+%C2%B7+CUDA)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&pause=1000&color=FF6B35&center=true&vCenter=true&random=false&width=700&lines=%E2%9A%A1+ONLINE;Data+Scientist+%26+ML+Engineer;Graph+AI+%7C+NLP+%7C+Computer+Vision+%7C+LLMs;Football+Analytics+%E2%9A%BD+%7C+Sports+AI;Powered+by+Python+%C2%B7+PyTorch+%C2%B7+LangChain+%C2%B7+CUDA)](https://git.io/typing-svg)
 <br/>
 
 <!-- SOCIAL BADGES -->
@@ -260,9 +260,13 @@ class SentinelX:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-### ✍️ Dev Quote
+<h3 align="center">✍️ Dev Quote</h3>
 
-[![Dev Quote](https://quotes-github-readme.vercel.app/api?type=vertical&quoteColor=FF6B35&authorColor=C0392B&backgroundColor=00000000&symbolColor=FF6B35)](https://github.com/AnuragChowdhury)
+<p align="center">
+  <a href="https://github.com/AnuragChowdhury">
+    <img src="https://quotes-github-readme.vercel.app/api?type=vertical&quoteColor=FF6B35&authorColor=C0392B&backgroundColor=00000000&symbolColor=FF6B35" alt="Dev Quote" />
+  </a>
+</p>
 
 ---
 
