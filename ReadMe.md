@@ -19,7 +19,7 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## `> SYSTEM BOOT // PILOT: ANURAG CHOWDHURY`
+## `> ANURAG CHOWDHURY`
 
 ```python
 anurag = {
@@ -44,7 +44,7 @@ anurag = {
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## ⚡ `EXPERIENCE LOG // CAREER TIMELINE`
+##  `CAREER TIMELINE`
 
 <table>
 <tr>
@@ -88,7 +88,7 @@ anurag = {
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🚀 `PROJECT ARSENAL // DEPLOYED`
+##  `PROJECTS`
 
 <div align="center">
 
@@ -137,7 +137,7 @@ class SentinelX:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 🧠 `SKILL MATRIX // TECH STACK`
+##  `TECH STACK`
 
 **Languages**
 
@@ -182,7 +182,7 @@ class SentinelX:
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## 📊 `ANALYTICS TOWER // GITHUB STATS`
+##  `ANALYTICS TOWER // GITHUB STATS`
 
 <div align="center">
 
@@ -213,15 +213,7 @@ class SentinelX:
 
 ---
 
-## 🌐 `3D CONTRIBUTION GRAPH`
 
-<div align="center">
-
-[![3D Contributions](https://raw.githubusercontent.com/AnuragChowdhury/AnuragChowdhury/output-3d-contrib/profile-green-dual.svg)](https://github.com/AnuragChowdhury)
-
-</div>
-
----
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
