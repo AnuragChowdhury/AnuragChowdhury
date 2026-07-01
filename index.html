@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Anurag Chowdhury – Data Scientist & ML Engineer"/>
+<title>Anurag Chowdhury ✦ Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#f5f3ee;
+  --surface:#ffffff;
+  --surface2:#f0ede6;
+  --border:#e2ddd5;
+  --border2:#ccc7bc;
+  --text:#1a1a1a;
+  --muted:#6b6660;
+  --dim:#a09a92;
+  --accent:#2d2d2d;
+  --accent-hover:#000;
+  --purple:#5b4fcf;
+  --purple-light:#ede9fb;
+  --green:#1a7a4a;
+  --teal:#0f766e;
+  --glow:#3ddc84;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden;cursor:default;}
+
+.loader-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:3000;opacity:1;transition:opacity 0.7s ease-out,visibility 0.7s ease-out;visibility:visible;pointer-events:auto;}
+.loader-wrapper.hidden{opacity:0;visibility:hidden;pointer-events:none;z-index:-1;}
+.loader{width:180px;height:150px;position:relative;display:flex;flex-direction:column;align-items:center;}
+.loader-nn{width:150px;height:110px;overflow:visible;}
+.loader-nn .nn-line{fill:none;stroke:var(--purple);stroke-width:1.4;stroke-dasharray:6 5;animation:nnFlow 1s linear infinite;opacity:0.5;}
+.loader-nn .nn-node{stroke:#111;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:nnPulse 1.3s ease-in-out infinite;}
+.loader-nn .nn-node.layer-in{fill:var(--purple);animation-delay:0s;}
+.loader-nn .nn-node.layer-hid{fill:var(--glow);animation-delay:0.22s;}
+.loader-nn .nn-node.layer-out{fill:var(--text);animation-delay:0.44s;}
+@keyframes nnFlow{from{stroke-dashoffset:22;}to{stroke-dashoffset:0;}}
+@keyframes nnPulse{0%,100%{opacity:0.55;transform:scale(1);}50%{opacity:1;transform:scale(1.35);}}
+.loader-orbit{position:absolute;top:0;left:15px;width:150px;height:110px;pointer-events:none;}
+.loader-orbit .dot{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--purple);box-shadow:0 0 6px var(--purple);animation:orbitTravel 2.4s linear infinite;}
+.loader-orbit .dot:nth-child(2){background:var(--glow);box-shadow:0 0 6px var(--glow);animation-delay:-0.8s;}
+.loader-orbit .dot:nth-child(3){background:var(--text);box-shadow:0 0 6px rgba(0,0,0,0.4);animation-delay:-1.6s;}
+@keyframes orbitTravel{
+  0%{left:0;top:20px;}
+  25%{left:74px;top:0;}
+  50%{left:148px;top:20px;}
+  75%{left:74px;top:100px;}
+  100%{left:0;top:20px;}
+}
+.loader-text{margin-top:0.6rem;font-size:0.72rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;font-family:'Inter',sans-serif;}
+.loader-text .cursor-blink{display:inline-block;animation:blink 0.9s steps(1) infinite;color:var(--purple);}
+@keyframes blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--glow));width:0%;z-index:1000;transition:width 0.1s;}
+.cursor-glow{position:fixed;top:-110px;left:-110px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle, rgba(91,79,207,0.10) 0%, transparent 70%);pointer-events:none;z-index:5;opacity:0;transition:opacity 0.3s;}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s cubic-bezier(.22,.68,0,1),transform 0.7s cubic-bezier(.22,.68,0,1);}
+.reveal.revealed{opacity:1;transform:translateY(0);}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(245,243,238,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--text);letter-spacing:0.01em;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;letter-spacing:0.04em;transition:color 0.2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--purple);transition:width 0.25s;}
+.nav-links a:hover{color:var(--text);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-links a.active{color:var(--purple);}
+.nav-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);}
+
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 3rem 4rem;gap:2rem;max-width:1280px;margin:0 auto;}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;}
+.hero-eyebrow::before{content:'';width:2.5rem;height:1px;background:var(--purple);}
+h1.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.4vw,3.8rem);font-weight:900;line-height:1.12;letter-spacing:-0.02em;margin-bottom:1rem;}
+#rotate-word{color:var(--purple);display:inline-block;transition:opacity 0.35s ease, transform 0.35s ease;}
+.hero-role{font-size:1.05rem;color:var(--muted);margin-bottom:1.5rem;}
+.hero-role strong{color:var(--text);font-weight:500;}
+.hero-desc{font-size:0.93rem;color:var(--muted);max-width:440px;margin-bottom:2rem;line-height:1.85;}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{padding:0.7rem 1.7rem;border-radius:4px;font-size:0.88rem;font-weight:500;cursor:pointer;text-decoration:none;transition:transform 0.18s,background 0.2s,border-color 0.2s;display:inline-flex;align-items:center;gap:0.4rem;font-family:'Inter',sans-serif;letter-spacing:0.01em;will-change:transform;}
+.btn-dark{background:var(--text);color:#fff;border:1px solid var(--text);}
+.btn-dark:hover{background:var(--accent-hover);}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2);}
+.btn-outline:hover{border-color:var(--text);}
+
+.collage-wrap{position:relative;display:flex;justify-content:center;align-items:center;padding:1rem;}
+.collage-glow{position:absolute;width:340px;height:340px;background:radial-gradient(circle, rgba(61,220,132,0.35) 0%, transparent 70%);filter:blur(20px);z-index:0;right:10%;top:30%;animation:pulse 4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:0.7;transform:scale(1);}50%{opacity:1;transform:scale(1.08);}}
+.collage{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,90px);grid-template-rows:repeat(4,80px);gap:6px;}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:6px;border:2px solid #000;box-shadow:0 4px 14px rgba(0,0,0,0.15);transition:transform 0.25s ease;}
+.tilt{transition:transform 0.15s ease-out;}
+.c1{grid-column:1/2;grid-row:1/2;}
+.c2{grid-column:2/3;grid-row:1/3;}
+.c3{grid-column:3/4;grid-row:1/2;}
+.c4{grid-column:1/2;grid-row:2/4;}
+.c5{grid-column:3/4;grid-row:2/3;}
+.c6{grid-column:2/3;grid-row:3/4;}
+.c7{grid-column:1/2;grid-row:4/5;}
+.c8{grid-column:2/3;grid-row:4/5;}
+.c9{grid-column:3/4;grid-row:3/5;}
+.collage-badge{position:absolute;z-index:2;background:var(--text);color:#fff;border-radius:10px;padding:0.7rem 0.9rem;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.25);}
+.collage-badge .bnum{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;line-height:1;}
+.collage-badge .blabel{font-size:0.62rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.05em;margin-top:0.15rem;}
+.badge-left{left:-10px;bottom:30px;}
+.badge-right{right:-15px;bottom:60px;}
+
+.marquee-wrap{overflow:hidden;padding:1rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);}
+.marquee-track{display:flex;gap:2.5rem;animation:marquee 30s linear infinite;width:max-content;}
+.marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+.marquee-item{font-size:0.85rem;font-weight:500;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:0.5rem;}
+.marquee-sep{color:var(--dim);}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%)}}
+
+section.full{padding:5rem 3rem;}
+.inner{max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--purple);margin-bottom:0.6rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;line-height:1.15;margin-bottom:0.8rem;}
+.section-sub{color:var(--muted);max-width:520px;font-size:0.93rem;}
+.section-head{margin-bottom:3rem;}
+hr.divider{border:none;border-top:1px solid var(--border);margin:0;}
+
+.photo-band{display:grid;grid-template-columns:repeat(4,1fr);gap:0.7rem;margin:3rem 0;}
+.photo-band .pb-img{border-radius:10px;overflow:hidden;border:1px solid var(--border);aspect-ratio:3/4;}
+.photo-band .pb-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;}
+.photo-band .pb-img:hover img{transform:scale(1.08);}
+.photo-band .pb-img.wide{aspect-ratio:16/10;grid-column:span 2;}
+
+.interest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.interest-card{background:var(--bg);padding:1.6rem 1.4rem;transition:background 0.2s, transform 0.2s;}
+.interest-card:hover{background:var(--surface);transform:translateY(-2px);}
+.interest-card .tag{display:inline-block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:3px;background:var(--purple-light);color:var(--purple);border:1px solid #c9c0f5;margin-bottom:0.8rem;}
+.interest-card h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;}
+.interest-card p{font-size:0.8rem;color:var(--muted);line-height:1.65;}
+
+#experience{background:var(--surface);}
+.exp-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem;align-items:start;}
+.exp-photo{position:sticky;top:6rem;border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.exp-photo img{width:100%;display:block;}
+.col-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--border);padding-bottom:0.6rem;margin-bottom:1.8rem;}
+.tl{position:relative;padding-left:1.6rem;}
+.tl::before{content:'';position:absolute;left:0;top:6px;bottom:0;width:1px;background:var(--border);}
+.tl-item{position:relative;margin-bottom:2.2rem;}
+.tl-item::before{content:'';position:absolute;left:-1.95rem;top:5px;width:8px;height:8px;border-radius:50%;background:var(--purple);border:2px solid var(--bg);}
+.tl-item.edu::before{background:var(--teal);}
+.tl-date{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:0.2rem;}
+.tl-item.edu .tl-date{color:var(--teal);}
+.tl-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:0.1rem;}
+.tl-org{font-size:0.83rem;color:var(--muted);margin-bottom:0.4rem;}
+.tl-desc{font-size:0.8rem;color:var(--muted);line-height:1.65;}
+.tl-badge{display:inline-block;font-size:0.65rem;letter-spacing:0.05em;padding:0.15rem 0.5rem;border-radius:3px;background:#e6f4ee;color:var(--green);border:1px solid #b2dfc6;margin-top:0.4rem;}
+
+.logo-strip{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+.logo-strip p{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);margin-bottom:1rem;}
+.logos{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;}
+.logo-pill{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.9rem;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.03em;transition:transform 0.2s,box-shadow 0.2s;}
+.logo-pill:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.06);}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.7rem;display:flex;flex-direction:column;transition:box-shadow 0.25s,transform 0.25s;}
+.proj-card:hover{box-shadow:0 12px 34px rgba(0,0,0,0.09);transform:translateY(-5px);}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;}
+.proj-tag{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:3px;background:var(--bg);color:var(--muted);border:1px solid var(--border);}
+.proj-tag.highlight{background:var(--purple-light);color:var(--purple);border-color:#c9c0f5;}
+.proj-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;margin-bottom:0.5rem;}
+.proj-card p{font-size:0.82rem;color:var(--muted);flex:1;margin-bottom:1rem;line-height:1.7;}
+.proj-metrics{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.1rem;}
+.metric{font-size:0.72rem;padding:0.2rem 0.5rem;border-radius:3px;background:#e6f4ee;color:var(--green);border:1px solid #b2dfc6;font-weight:500;}
+.proj-links{display:flex;gap:1rem;margin-top:auto;}
+.proj-link{font-size:0.8rem;color:var(--purple);text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:0.25rem;}
+.proj-link:hover{color:var(--text);}
+
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:2.5rem 0;}
+.stat-cell{background:var(--surface);padding:1.6rem;text-align:center;}
+.stat-cell .snum{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--purple);}
+.stat-cell .slabel{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.3rem;}
+
+#skills{background:var(--surface);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;}
+.skill-group{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.4rem;transition:transform 0.2s;}
+.skill-group:hover{transform:translateY(-3px);}
+.skill-group h3{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:1rem;color:var(--text);}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.45rem;}
+.stag{font-size:0.75rem;padding:0.28rem 0.65rem;border-radius:20px;background:var(--surface);color:var(--muted);border:1px solid var(--border);transition:background 0.2s,color 0.2s,border-color 0.2s;}
+.stag:hover{background:var(--purple);color:#fff;border-color:var(--purple);}
+
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem;}
+.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.2rem;display:flex;gap:0.8rem;align-items:flex-start;transition:transform 0.2s;}
+.cert-card:hover{transform:translateY(-3px);}
+.cert-icon{font-size:1.3rem;flex-shrink:0;}
+.cert-name{font-size:0.85rem;font-weight:500;margin-bottom:0.2rem;}
+.cert-issuer{font-size:0.73rem;color:var(--muted);}
+.cert-date{font-size:0.68rem;color:var(--dim);margin-top:0.2rem;}
+
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;}
+.test-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.7rem;transition:transform 0.2s,box-shadow 0.2s;}
+.test-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,0.07);}
+.test-quote{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.3rem;font-style:italic;position:relative;padding-left:1.2rem;}
+.test-quote::before{content:'"';position:absolute;left:0;top:-0.2rem;font-size:2rem;color:var(--purple);font-family:'Playfair Display',serif;line-height:1;}
+.test-author{display:flex;align-items:center;gap:0.8rem;}
+.avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;color:var(--purple);background:var(--purple-light);border:1px solid #c9c0f5;flex-shrink:0;}
+.test-name{font-weight:600;font-size:0.87rem;}
+.test-role{font-size:0.74rem;color:var(--muted);}
+
+#about{background:var(--surface);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.about-photos{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+.about-photos .ap-img{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.about-photos .ap-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-photos .ap-tall{grid-row:span 2;aspect-ratio:3/5;}
+.about-photos .ap-short{aspect-ratio:1/1;}
+.about-text p{color:var(--muted);margin-bottom:1rem;line-height:1.85;font-size:0.95rem;}
+.about-text p strong{color:var(--text);font-weight:600;}
+.about-achievements{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem;}
+.ach-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.2rem;display:flex;gap:0.8rem;align-items:flex-start;transition:transform 0.2s;}
+.ach-card:hover{transform:translateX(4px);}
+.ach-icon{font-size:1.2rem;flex-shrink:0;}
+.ach-title{font-weight:600;font-size:0.87rem;margin-bottom:0.15rem;}
+.ach-desc{font-size:0.77rem;color:var(--muted);}
+
+.opp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.opp-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.3rem;transition:transform 0.2s,box-shadow 0.2s;}
+.opp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,0.06);}
+.opp-icon{font-size:1.4rem;margin-bottom:0.6rem;}
+.opp-card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.3rem;}
+.opp-card p{font-size:0.78rem;color:var(--muted);line-height:1.6;}
+
+.faq-wrap{max-width:720px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{padding:1.1rem 0;font-size:0.93rem;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;gap:1rem;}
+.faq-q:hover{color:var(--purple);}
+.faq-arrow{color:var(--dim);font-size:1rem;flex-shrink:0;transition:transform 0.25s;}
+.faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:0.86rem;line-height:1.78;transition:max-height 0.35s ease, padding 0.35s ease;}
+.faq-item.open .faq-a{max-height:240px;padding-bottom:1.1rem;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-item.open .faq-q{color:var(--purple);}
+
+.gallery-outer{overflow:hidden;position:relative;}
+.gallery-row{display:flex;gap:0.8rem;margin-bottom:0.8rem;}
+.gallery-box{flex-shrink:0;width:200px;height:200px;border-radius:10px;overflow:hidden;border:1px solid var(--border);position:relative;}
+.gallery-box img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.35s;}
+.gallery-box:hover img{transform:scale(1.08);}
+.gallery-box .gb-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));color:#fff;font-size:0.68rem;padding:0.5rem 0.6rem 0.4rem;}
+
+.lightbox{position:fixed;inset:0;background:rgba(10,10,10,0.92);z-index:2000;display:none;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:90vw;max-height:80vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.5);}
+.lightbox-caption{color:#fff;font-size:0.9rem;opacity:0.85;}
+.lightbox-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;}
+
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin-top:1.5rem;}
+.story-text h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;}
+.story-text p{font-size:0.87rem;color:var(--muted);line-height:1.85;}
+.story-image{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.story-image img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px;transition:transform 0.4s;}
+.story-image:hover img{transform:scale(1.04);}
+
+.nature-section{background:var(--text);color:#fff;padding:4rem 3rem;text-align:center;}
+.nature-section .section-title{color:#fff;}
+.nature-section .section-sub{color:rgba(255,255,255,0.6);margin:0 auto;}
+.nature-section .btn-outline{border-color:rgba(255,255,255,0.3);color:#fff;}
+.nature-section .btn-outline:hover{border-color:#fff;}
+
+#contact{text-align:center;padding:7rem 3rem;}
+.contact-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.1;margin-bottom:1.2rem;}
+.contact-sub{color:var(--muted);margin-bottom:2.5rem;font-size:1rem;}
+.contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.social-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.65rem 1.3rem;border-radius:6px;border:1px solid var(--border2);color:var(--muted);text-decoration:none;font-size:0.85rem;transition:all 0.2s;background:var(--surface);}
+.social-btn:hover{border-color:var(--text);color:var(--text);transform:translateY(-2px);}
+.contact-email{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--text);text-decoration:none;border-bottom:2px solid var(--purple);}
+.contact-email:hover{color:var(--purple);}
+
+footer{border-top:1px solid var(--border);padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-text{font-size:0.78rem;color:var(--dim);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:0.78rem;color:var(--dim);text-decoration:none;}
+.footer-links a:hover{color:var(--text);}
+
+@media(max-width:768px){
+  .cursor-glow{display:none;}
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .nav-toggle{display:block;}
+  #hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;gap:3rem;}
+  .collage{grid-template-columns:repeat(3,80px);grid-template-rows:repeat(4,70px);}
+  section.full{padding:4rem 1.5rem;}
+  .exp-layout{grid-template-columns:1fr;}
+  .exp-photo{position:static;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-photos{order:-1;}
+  .story-grid{grid-template-columns:1fr;}
+  .photo-band{grid-template-columns:repeat(2,1fr);}
+  .photo-band .pb-img.wide{grid-column:span 2;}
+  .stat-strip{grid-template-columns:repeat(2,1fr);}
+  footer{flex-direction:column;align-items:flex-start;}
+  .contact-links{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="loader-wrapper" id="loader">
+  <div class="loader">
+    <svg class="loader-nn" viewBox="0 0 150 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- connections: input -> hidden -->
+      <path class="nn-line" d="M20,25 L75,15" style="animation-delay:0s"/>
+      <path class="nn-line" d="M20,25 L75,55" style="animation-delay:0.05s"/>
+      <path class="nn-line" d="M20,25 L75,95" style="animation-delay:0.1s"/>
+      <path class="nn-line" d="M20,55 L75,15" style="animation-delay:0.05s"/>
+      <path class="nn-line" d="M20,55 L75,55" style="animation-delay:0.1s"/>
+      <path class="nn-line" d="M20,55 L75,95" style="animation-delay:0.15s"/>
+      <path class="nn-line" d="M20,85 L75,15" style="animation-delay:0.1s"/>
+      <path class="nn-line" d="M20,85 L75,55" style="animation-delay:0.15s"/>
+      <path class="nn-line" d="M20,85 L75,95" style="animation-delay:0.2s"/>
+      <!-- connections: hidden -> output -->
+      <path class="nn-line" d="M75,15 L130,40" style="animation-delay:0.2s"/>
+      <path class="nn-line" d="M75,55 L130,40" style="animation-delay:0.25s"/>
+      <path class="nn-line" d="M75,95 L130,40" style="animation-delay:0.3s"/>
+      <path class="nn-line" d="M75,15 L130,75" style="animation-delay:0.25s"/>
+      <path class="nn-line" d="M75,55 L130,75" style="animation-delay:0.3s"/>
+      <path class="nn-line" d="M75,95 L130,75" style="animation-delay:0.35s"/>
+      <!-- input layer nodes -->
+      <circle class="nn-node layer-in" cx="20" cy="25" r="5"/>
+      <circle class="nn-node layer-in" cx="20" cy="55" r="5"/>
+      <circle class="nn-node layer-in" cx="20" cy="85" r="5"/>
+      <!-- hidden layer nodes -->
+      <circle class="nn-node layer-hid" cx="75" cy="15" r="5"/>
+      <circle class="nn-node layer-hid" cx="75" cy="55" r="5"/>
+      <circle class="nn-node layer-hid" cx="75" cy="95" r="5"/>
+      <!-- output layer nodes -->
+      <circle class="nn-node layer-out" cx="130" cy="40" r="5"/>
+      <circle class="nn-node layer-out" cx="130" cy="75" r="5"/>
+    </svg>
+    <div class="loader-orbit">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="loader-text">Initializing Intelligence<span class="cursor-blink">_</span></div>
+  </div>
+</div>
+
+<script>
+  // Immediate loader hiding fallback
+  function autoHideLoader() {
+    const l = document.getElementById('loader');
+    if (l) l.classList.add('hidden');
+  }
+  // Try to hide after DOM paints
+  requestAnimationFrame(() => setTimeout(autoHideLoader, 1400));
+  // Absolute fallback
+  setTimeout(autoHideLoader, 2200);
+</script>
+
+<nav>
+  <div class="logo">Chowdhury ✦</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Data Scientist &amp; ML Engineer</div>
+    <h1 class="hero-name">Engineering <span id="rotate-word">Intelligence</span><br/>with <span style="color:var(--purple);">Intelligence</span>.</h1>
+    <p class="hero-role">Fuelling Innovation Through <strong>Advanced Analytics.</strong></p>
+    <p class="hero-desc">Uncovering hidden patterns and building production-grade AI — from Graph Networks catching fraud to LLM agents that reason. Currently at Iolite Technologies, Bangalore.</p>
+    <div class="hero-cta">
+      <a href="mailto:anurag.chowdhury@msam.christuniversity.in" class="btn btn-dark magnetic">Contact Me →</a>
+      <a href="assets/Anurag_Chowdhury_Resume.pdf" download class="btn btn-outline magnetic">Download Resume ↓</a>
+    </div>
+  </div>
+  <div class="collage-wrap">
+    <div class="collage-glow"></div>
+    <div class="collage">
+      <img class="c1 tilt" src="assets/lifestyle-trek-back.jpg" alt="trekking"/>
+      <img class="c2 tilt" src="assets/portrait-trek-adidas.jpg" alt="portrait"/>
+      <img class="c3 tilt" src="assets/lifestyle-fifa-stadium.jpg" alt="fifa world cup"/>
+      <img class="c4 tilt" src="assets/lifestyle-motorcycle.jpg" alt="motorcycle"/>
+      <img class="c5 tilt" src="assets/portrait-riverside.jpg" alt="portrait"/>
+      <img class="c6 tilt" src="assets/lifestyle-kkr.jpg" alt="cricket stadium"/>
+      <img class="c7 tilt" src="assets/lifestyle-workspace.jpg" alt="workspace"/>
+      <img class="c8 tilt" src="assets/portrait-formal.jpg" alt="formal portrait"/>
+      <img class="c9 tilt" src="assets/lifestyle-fifa-flag.jpg" alt="football fan"/>
+    </div>
+    <div class="collage-badge badge-left">
+      <div class="bnum" data-count="800">0</div>
+      <div class="blabel">LinkedIn Followers</div>
+    </div>
+    <div class="collage-badge badge-right">
+      <div class="bnum" data-count="100+">0</div>
+      <div class="blabel">Problems Solved</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">PyTorch <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">TensorFlow <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">LangChain <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">LangGraph <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Hugging Face <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">FastAPI <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Streamlit <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Docker <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Graph AI (GAT) <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Monte Carlo Simulation <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Computer Vision <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">NLP <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">XGBoost <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">CUDA Python <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">PyTorch <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">TensorFlow <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">LangChain <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">LangGraph <span class="marquee-sep">✦</span></span>
+  </div>
+</div>
+
+<section class="full">
+<div class="inner">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">Domains</div>
+    <h2 class="section-title">Areas of Interest</h2>
+    <p class="section-sub">Exploring the frontiers of technology and data — from large language models to graph intelligence and gaming simulation.</p>
+  </div>
+  <div class="interest-grid reveal-stagger">
+    <div class="interest-card"><span class="tag">LLMs · NLP</span><h3>Large Language Models</h3><p>Building RAG pipelines, agentic workflows, and fine-tuned models using LangChain, LangGraph, and Hugging Face Transformers.</p></div>
+    <div class="interest-card"><span class="tag">Vision · DL</span><h3>Computer Vision</h3><p>Image classification, object detection, and visual AI systems powered by PyTorch and TensorFlow deep learning frameworks.</p></div>
+    <div class="interest-card"><span class="tag">Graph AI</span><h3>Graph Intelligence</h3><p>Graph Attention Networks (GAT), PageRank, and Louvain community detection for fraud intelligence and network analysis.</p></div>
+    <div class="interest-card"><span class="tag">Gaming · Stats</span><h3>Gaming Analytics</h3><p>Monte Carlo simulation for slot engine modelling — RTP, Hit Frequency, Volatility, ARPU, and LTV optimisation at scale.</p></div>
+    <div class="interest-card"><span class="tag">Fintech · ML</span><h3>Fraud Detection</h3><p>Real-time anomaly detection, bot identification, and collusion ring discovery with XGBoost and ensemble ML models.</p></div>
+    <div class="interest-card"><span class="tag">MLOps</span><h3>AI Deployment</h3><p>End-to-end ML lifecycle management using FastAPI, Streamlit, and Docker — from notebook to production-grade service.</p></div>
+  </div>
+
+  <div class="photo-band reveal-stagger">
+    <div class="pb-img wide"><img src="assets/lifestyle-fifa-stadium.jpg" alt="FIFA World Cup Qatar"/></div>
+    <div class="pb-img"><img src="assets/portrait-trek-adidas.jpg" alt="trekking portrait"/></div>
+    <div class="pb-img"><img src="assets/lifestyle-kkr.jpg" alt="KKR cricket stadium"/></div>
+  </div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section class="full" id="experience" style="background:var(--surface);">
+<div class="inner">
+  <div class="section-head reveal"><div class="section-eyebrow">Journey</div><h2 class="section-title">Professional Journey</h2><p class="section-sub">Educational milestones and work experiences shaping a focused AI and ML career.</p></div>
+  <div class="exp-layout">
+    <div class="exp-photo reveal"><img src="assets/portrait-formal.jpg" alt="Anurag Chowdhury formal portrait"/></div>
+    <div>
+      <div class="exp-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
+        <div class="reveal">
+          <div class="col-label">Work Experience</div>
+          <div class="tl">
+            <div class="tl-item"><div class="tl-date">Oct 2025 – Present</div><div class="tl-title">ML Engineer Intern</div><div class="tl-org">Iolite Technologies · Bangalore, India</div><div class="tl-desc">Built an intelligent Admission Analytics dashboard improving decision efficiency by ~30% with predictive insights. Developed a fully autonomous marks verification system using Mistral OCR3 + GPT-4, reducing processing time by ~60% while improving accuracy.</div><span class="tl-badge">Current Role</span></div>
+            <div class="tl-item"><div class="tl-date">Jan 2023 – May 2023</div><div class="tl-title">Data Analyst Intern</div><div class="tl-org">HSBC Data Processing Centre · Bangalore, India</div><div class="tl-desc">Worked with the Global COE Team to build ML models to optimise HSBC stock price prediction. Delivered a model with RMSE of 0.4 to support informed buy/sell decisions, improving financial outcomes.</div></div>
+            <div class="tl-item"><div class="tl-date">Jul 2019 – Aug 2020</div><div class="tl-title">Assistant System Engineer (ML)</div><div class="tl-org">Tata Consultancy Services · Bangalore, India</div><div class="tl-desc">Reduced user errors in purchase orders by 30% using a Recommendation Engine. Assisted in designing a data pipeline architecture (team of 5) that scaled a new product to 100,000 daily active users.</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="col-label">Education</div>
+          <div class="tl">
+            <div class="tl-item edu"><div class="tl-date">2025 – 2027</div><div class="tl-title">MSc AI &amp; ML</div><div class="tl-org">Christ (Deemed to be University) · Bangalore</div><div class="tl-desc">CGPA: 3.55/4.0 · Coursework: Deep Learning, NLP, Time Series, LLMs.</div></div>
+            <div class="tl-item edu"><div class="tl-date">2021 – 2023</div><div class="tl-title">MSc Data Science</div><div class="tl-org">Christ (Deemed to be University) · Bangalore</div><div class="tl-desc">CGPA: 3.55/4.0 · Foundation in statistical modelling, ML, and data analytics.</div></div>
+            <div class="tl-item edu"><div class="tl-date">2015 – 2019</div><div class="tl-title">B.Tech Computer Science Engineering</div><div class="tl-org">Christ (Deemed to be University) · Bangalore</div><div class="tl-desc">CGPA: 9.45/10.0 · Coursework: Algorithms, OS, Data Structures. College Football Representative (2016–2018).</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="logo-strip reveal"><p>Diversified experience across MNCs &amp; enterprises…</p><div class="logos"><div class="logo-pill">Iolite Technologies</div><div class="logo-pill">HSBC</div><div class="logo-pill">Tata Consultancy Services</div><div class="logo-pill">Christ University</div><div class="logo-pill">NVIDIA</div><div class="logo-pill">DataCamp</div></div></div>
+</div>
+</section>
+
+<hr class="divider"/>
+
+<section class="full" id="projects"><div class="inner"><div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:3rem;" class="reveal"><div><div class="section-eyebrow">Portfolio</div><h2 class="section-title" style="margin-bottom:0.4rem;">Personal Projects</h2><p class="section-sub" style="margin-bottom:0;">AI &amp; ML systems spanning fraud detection, gaming analytics, and agentic intelligence.</p></div><a href="https://github.com/AnuragChowdhury" class="btn btn-outline magnetic" target="_blank">GitHub Repository ↗</a></div><div class="stat-strip reveal-stagger"><div class="stat-cell"><div class="snum" data-count="1000000+">0</div><div class="slabel">Spins / 2s</div></div><div class="stat-cell"><div class="snum" data-count="98%">0%</div><div class="slabel">F1-Score</div></div><div class="stat-cell"><div class="snum" data-count="0.5ms">0ms</div><div class="slabel">Latency</div></div><div class="stat-cell"><div class="snum" data-count="68.5%">0%</div><div class="slabel">Churn Accuracy</div></div></div><div class="projects-grid reveal-stagger"><div class="proj-card"><div class="proj-tags"><span class="proj-tag highlight">Gaming Analytics</span><span class="proj-tag">Monte Carlo</span><span class="proj-tag">XGBoost</span></div><h3>PlayerPulse</h3><p>Gaming analytics platform with a Monte Carlo slot engine processing 1M+ spins in under 2s. Optimises RTP, hit frequency, and volatility while generating synthetic player datasets for A/B testing.</p><div class="proj-metrics"><span class="metric">1M+ spins / 2s</span><span class="metric">68.5% Churn Accuracy</span><span class="metric">40% Lower Churn (A/B)</span></div><div class="proj-links"><a href="https://github.com/AnuragChowdhury" class="proj-link" target="_blank">GitHub ↗</a></div></div><div class="proj-card"><div class="proj-tags"><span class="proj-tag highlight">Graph AI</span><span class="proj-tag">GAT</span><span class="proj-tag">Fraud Detection</span></div><h3>SentinelX: Graph AI Fraud Intelligence</h3><p>Real-time fraud detection platform using Graph Attention Networks, XGBoost, and anomaly detection to identify bots, collusion rings, and multi-account abuse. BI dashboard modelling $25K+ weekly revenue protection.</p><div class="proj-metrics"><span class="metric">98% F1-Score</span><span class="metric">0.5ms Latency</span><span class="metric">$25K+ Revenue Protected</span></div><div class="proj-links"><a href="https://github.com/AnuragChowdhury" class="proj-link" target="_blank">GitHub ↗</a></div></div><div class="proj-card"><div class="proj-tags"><span class="proj-tag highlight">LLMs · RAG</span><span class="proj-tag">LangChain</span></div><h3>SmartRecipeAssistant</h3><p>LLM-powered recipe recommendation and generation assistant leveraging RAG pipelines and LangChain. Delivers personalised culinary guidance from ingredient inputs using Hugging Face models.</p><div class="proj-links"><a href="https://github.com/AnuragChowdhury" class="proj-link" target="_blank">GitHub ↗</a></div></div><div class="proj-card"><div class="proj-tags"><span class="proj-tag highlight">Agentic AI</span><span class="proj-tag">LangGraph</span></div><h3>Decider-AI</h3><p>Agentic AI decision-support system built with LangGraph that guides users through complex decisions using structured multi-step reasoning chains and tool-calling agents.</p><div class="proj-links"><a href="https://github.com/AnuragChowdhury" class="proj-link" target="_blank">GitHub ↗</a></div></div><div class="proj-card"><div class="proj-tags"><span class="proj-tag highlight">NLP · Classification</span><span class="proj-tag">scikit-learn</span></div><h3>Student Query Classifier</h3><p>NLP-based automated classification system that routes student queries into academic categories — enabling smarter support systems and reducing manual triage time at scale.</p><div class="proj-links"><a href="https://github.com/AnuragChowdhury" class="proj-link" target="_blank">GitHub ↗</a></div></div></div></div></section>
+
+<section class="full" style="background:var(--surface);"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">Colleagues</div><h2 class="section-title">What My Colleagues Say</h2><p class="section-sub">Feedback from people I've worked with at TCS, HSBC, and Iolite Technologies.</p></div><div class="test-grid reveal-stagger"><div class="test-card"><p class="test-quote">Anurag has an exceptional ability to take ambiguous problem statements and translate them into rigorous, production-ready ML systems. His work on graph-based fraud modelling was impressive both technically and in terms of business impact.</p><div class="test-author"><div class="avatar">IT</div><div><div class="test-name">Colleague, Iolite Technologies</div><div class="test-role">AI Engineering Team · 2025</div></div></div></div><div class="test-card"><p class="test-quote">Working with Anurag at HSBC meant every deliverable came with clarity and statistical rigour. He built our stock prediction model with a remarkable RMSE of 0.4 — the team relied on his analytical judgement throughout.</p><div class="test-author"><div class="avatar">HC</div><div><div class="test-name">Senior Analyst, HSBC Global COE</div><div class="test-role">Data Processing Centre · 2023</div></div></div></div><div class="test-card"><p class="test-quote">At TCS, Anurag brought both engineering precision and ML creativity to our pipeline work. The recommendation engine he built reduced purchase order errors by 30% — a direct and measurable win for the team.</p><div class="test-author"><div class="avatar">TC</div><div><div class="test-name">Tech Lead, Tata Consultancy Services</div><div class="test-role">ML Systems Division · 2019–2020</div></div></div></div></div></div></section>
+
+<section class="full"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">Open To</div><h2 class="section-title">Beyond AI: Expanding My Horizon</h2><p class="section-sub">Open to freelance projects, mentorship, consulting, and full-time opportunities in AI and ML.</p></div><div class="opp-grid reveal-stagger"><div class="opp-card"><div class="opp-icon">💼</div><h4>Full-Time Roles</h4><p>Ready to join a team building ambitious AI systems. Let's create something impactful together.</p></div><div class="opp-card"><div class="opp-icon">🔬</div><h4>Freelancing</h4><p>Ready to bring your AI visions to life. Let's team up for challenging, high-impact ML projects.</p></div><div class="opp-card"><div class="opp-icon">📊</div><h4>Consulting</h4><p>Unlock your data's potential through insightful AI and ML strategy consulting engagements.</p></div><div class="opp-card"><div class="opp-icon">🎯</div><h4>Mentorship</h4><p>Happy to mentor aspiring data scientists and ML engineers. Interview prep and career guidance welcome.</p></div></div><div style="text-align:center;margin-top:2.5rem;" class="reveal"><a href="mailto:anurag.chowdhury@msam.christuniversity.in" class="btn btn-dark magnetic">Get in touch →</a></div></div></section>
+
+<hr class="divider"/>
+
+<section class="full" id="about" style="background:var(--surface);"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">About</div><h2 class="section-title">I'll talk more about myself now</h2><p class="section-sub">From B.Tech CSE through three degrees at Christ University to ML engineering in Bangalore's tech scene.</p></div><div class="about-grid"><div class="about-text reveal"><p>I'm Anurag Chowdhury — a Data Scientist and ML Engineer with hands-on experience building <strong>predictive models, NLP systems, AI-powered applications, and gaming analytics platforms</strong>. I'm based in Bangalore, currently at Iolite Technologies and simultaneously pursuing my MSc AI &amp; ML at Christ University.</p><p>My journey started with a <strong>B.Tech in Computer Science (CGPA 9.45)</strong> at Christ University, followed by an MSc in Data Science, and now an MSc in AI &amp; ML. Along the way I've worked at TCS, HSBC's Global COE, and now Iolite Technologies — each role sharpening a different edge of my technical and problem-solving toolkit.</p><p>Beyond the terminal, I'm a former <strong>College Football Representative (2016–2018)</strong>, a Gold Medallist in Inter-Dept Cricket, and a Silver Medallist in Mathematics and Information Science Olympiads. I believe the discipline and teamwork from sports translates directly to engineering.</p><p>I'm passionate about the edge cases that break models, the mathematics behind them, and the craft of deploying AI that works <strong>reliably in the real world</strong> — not just in notebooks.</p><a href="https://www.linkedin.com/in/mranuragchowdhury/" target="_blank" class="btn btn-outline magnetic" style="margin-top:0.5rem;display:inline-flex;">Connect on LinkedIn →</a><div class="about-achievements"><div class="ach-card"><div class="ach-icon">🏅</div><div><div class="ach-title">Gold Medal — Silverzone Mathematics Olympiad</div><div class="ach-desc">2014 · National-level academic excellence in mathematics.</div></div></div><div class="ach-card"><div class="ach-icon">🥈</div><div><div class="ach-title">Silver Medal — Information Science Olympiad</div><div class="ach-desc">2014 · Recognition in early computational thinking.</div></div></div><div class="ach-card"><div class="ach-icon">⚽</div><div><div class="ach-title">College Football Representative</div><div class="ach-desc">2016–2018 at Christ University. Gold Medal (Cricket) · Silver Medal (Football) — Inter-Dept.</div></div></div><div class="ach-card"><div class="ach-icon">📜</div><div><div class="ach-title">NVIDIA CUDA Python Certified</div><div class="ach-desc">Fundamentals of Accelerated Computing with CUDA Python · Apr 2026.</div></div></div></div></div><div class="about-photos reveal"><div class="ap-img ap-tall"><img src="assets/gallery-graduation.jpg" alt="graduation"/></div><div class="ap-img ap-short"><img src="assets/gallery-boat.jpg" alt="boat ride"/></div><div class="ap-img ap-short"><img src="assets/gallery-durgapuja.jpg" alt="durga puja"/></div></div></div></div></section>
+
+<section class="full" id="skills"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">Stack</div><h2 class="section-title">Tools I Embrace &amp; Explore</h2><p class="section-sub">Skills and tools fuelling production-grade AI — constantly updated as the field evolves.</p></div><div class="skills-grid reveal-stagger"><div class="skill-group"><h3>Languages &amp; Core Libraries</h3><div class="skill-tags"><span class="stag">Python</span><span class="stag">NumPy</span><span class="stag">Pandas</span><span class="stag">scikit-learn</span><span class="stag">SQL</span></div></div><div class="skill-group"><h3>Deep Learning Frameworks</h3><div class="skill-tags"><span class="stag">PyTorch</span><span class="stag">TensorFlow</span><span class="stag">Hugging Face</span><span class="stag">Transformers</span><span class="stag">XGBoost</span></div></div><div class="skill-group"><h3>LLM &amp; Agentic AI</h3><div class="skill-tags"><span class="stag">LangChain</span><span class="stag">LangGraph</span><span class="stag">RAG Pipelines</span><span class="stag">Mistral OCR3</span><span class="stag">GPT-4</span></div></div><div class="skill-group"><h3>Deployment &amp; MLOps</h3><div class="skill-tags"><span class="stag">FastAPI</span><span class="stag">Streamlit</span><span class="stag">Docker</span><span class="stag">GitHub</span></div></div><div class="skill-group"><h3>ML Domains</h3><div class="skill-tags"><span class="stag">Computer Vision</span><span class="stag">NLP</span><span class="stag">Graph AI (GAT)</span><span class="stag">Time Series</span><span class="stag">Sports Analytics</span></div></div><div class="skill-group"><h3>Gaming &amp; Simulation</h3><div class="skill-tags"><span class="stag">Monte Carlo Simulation</span><span class="stag">RTP Optimisation</span><span class="stag">Hit Frequency</span><span class="stag">Volatility Modelling</span><span class="stag">ARPU / LTV</span></div></div></div><div style="margin-top:3rem;"><div class="section-eyebrow reveal" style="margin-bottom:1rem;">Certifications</div><div class="certs-grid reveal-stagger"><div class="cert-card"><div class="cert-icon">⚡</div><div><div class="cert-name">Accelerated Computing with CUDA Python</div><div class="cert-issuer">NVIDIA</div><div class="cert-date">April 2026</div></div></div><div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">Developing LLM Applications with LangChain</div><div class="cert-issuer">DataCamp</div><div class="cert-date">November 2025</div></div></div><div class="cert-card"><div class="cert-icon">📈</div><div><div class="cert-name">Time Series Analysis in Python</div><div class="cert-issuer">DataCamp</div><div class="cert-date">November 2025</div></div></div><div class="cert-card"><div class="cert-icon">🐍</div><div><div class="cert-name">Python for Data Science</div><div class="cert-issuer">Infosys Springboard</div><div class="cert-date">August 2025</div></div></div></div></div><div class="photo-band reveal-stagger"><div class="pb-img"><img src="assets/lifestyle-workspace.jpg" alt="workspace setup"/></div><div class="pb-img wide"><img src="assets/gallery-college-group.jpg" alt="college batch group"/></div><div class="pb-img"><img src="assets/lifestyle-motorcycle.jpg" alt="motorcycle"/></div></div></div></section>
+
+<hr class="divider"/>
+
+<section class="full" style="background:var(--surface);"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">FAQ</div><h2 class="section-title">Innovate with Data Science</h2></div><div class="faq-wrap reveal"><div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">What is your expected response time for inquiries? <span class="faq-arrow">▾</span></div><div class="faq-a">I typically reply within 2–4 days. During intensive project phases, it may take up to a week — but I always follow up. LinkedIn is the fastest channel to reach me.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which domains are you most excited to work in? <span class="faq-arrow">▾</span></div><div class="faq-a">I'm most drawn to LLM applications, agentic AI systems, graph-based intelligence, and gaming analytics. High-impact domains like fintech fraud detection, healthcare AI, and sports analytics are where I want to create real-world change.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Are you open to freelance or consulting work? <span class="faq-arrow">▾</span></div><div class="faq-a">Yes, selectively. I take on freelance AI/ML projects involving genuine research challenges or production deployment complexity. Reach out with your problem statement and timeline.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What problems can be solved with Data Science? <span class="faq-arrow">▾</span></div><div class="faq-a">Data science can address fraud detection in fintech, demand forecasting in retail, predictive maintenance in manufacturing, patient outcome modelling in healthcare, and personalisation in gaming. The key is pairing the right algorithm with the right problem — not applying ML indiscriminately.</div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What's your approach to LLMs and agentic systems? <span class="faq-arrow">▾</span></div><div class="faq-a">I treat LLMs as powerful reasoning engines best paired with structured tools, retrieval systems, and well-designed logic graphs. LangGraph gives me the control flow I need for reliable multi-step agentic behaviour — I'm wary of over-engineering simple tasks with agents when a direct call suffices.</div></div></div></div></section>
+
+<section class="full" id="gallery"><div class="inner"><div class="section-head reveal"><div class="section-eyebrow">Gallery</div><h2 class="section-title">Moments Captured, Memories Shared.</h2><p class="section-sub">Life beyond the screen — football pitches, mountain trails, camera in hand, and good company along the way. Click any photo for a closer look.</p></div><div class="gallery-outer"><div class="gallery-row reveal-stagger"><div class="gallery-box"><img src="assets/gallery-football-team.jpg" alt="football team"/><div class="gb-caption">Sunday football, full squad</div></div><div class="gallery-box"><img src="assets/gallery-football-photography.jpg" alt="football photography"/><div class="gb-caption">Shot mid-tackle</div></div><div class="gallery-box"><img src="assets/gallery-trek-biggroup.jpg" alt="trek big group"/><div class="gb-caption">Hilltop crew</div></div><div class="gallery-box"><img src="assets/gallery-trek-group5.jpg" alt="trek group of 5"/><div class="gb-caption">Trek squad of five</div></div><div class="gallery-box"><img src="assets/gallery-college-group.jpg" alt="college group"/><div class="gb-caption">Batch photo, Christ University</div></div></div><div class="gallery-row reveal-stagger"><div class="gallery-box"><img src="assets/gallery-friends-night.jpg" alt="friends night"/><div class="gb-caption">Late-night chaos with the boys</div></div><div class="gallery-box"><img src="assets/gallery-friends-selfie.jpg" alt="friends selfie"/><div class="gb-caption">Group selfie, mid-trek</div></div><div class="gallery-box"><img src="assets/gallery-graduation.jpg" alt="graduation"/><div class="gb-caption">MSc graduation day</div></div><div class="gallery-box"><img src="assets/gallery-boat.jpg" alt="boat ride"/><div class="gb-caption">Boat ride, Kolkata</div></div><div class="gallery-box"><img src="assets/gallery-durgapuja.jpg" alt="durga puja"/><div class="gb-caption">Durga Puja pandal hopping</div></div></div><div class="gallery-row reveal-stagger"><div class="gallery-box"><img src="assets/gallery-campus.jpg" alt="campus"/><div class="gb-caption">Campus grounds</div></div><div class="gallery-box"><img src="assets/gallery-delhi.jpg" alt="delhi monument"/><div class="gb-caption">National War Memorial, Delhi</div></div><div class="gallery-box"><img src="assets/gallery-football-match.jpg" alt="football match"/><div class="gb-caption">Weekend pickup match</div></div><div class="gallery-box"><img src="assets/gallery-train.jpg" alt="train"/><div class="gb-caption">A frame worth catching</div></div><div class="gallery-box"><img src="assets/lifestyle-fifa-stadium.jpg" alt="fifa stadium"/><div class="gb-caption">FIFA World Cup, Qatar 2022</div></div></div></div></div></section>
+
+<section class="full" style="background:var(--surface);"><div class="inner"><div class="section-eyebrow reveal">Story</div><h2 class="section-title reveal">Unleashing a few of my stories…</h2><div class="story-grid"><div class="story-text reveal"><h3>Models, mountains, and the boys</h3><p>Ask me about graph neural networks and I'll talk for an hour. Ask about that 9.45 CGPA and I'll just shrug — late-night debugging sessions and early-morning football practice turned out to be a weirdly good combo. I started at TCS figuring out why purchase orders kept breaking, moved to explaining stock price RMSE at HSBC, and now I'm at Iolite teaching machines to catch fraudsters before they know they've been caught.</p><p style="margin-top:0.8rem;">Off-screen, I'm probably on a football pitch, a few thousand feet up on a trek I underestimated, or trying — and often failing — to get the framing right on my camera. Most of my favourite memories don't have a model behind them, just good company, terrible trek-day decisions, and friends who somehow still agree to come along. Somewhere between an Olympiad gold in 2014 and shipping a fraud model with 98% F1-score, I realised I just like building things that get smarter over time — code included.</p></div><div class="story-image reveal"><img src="assets/lifestyle-trek-back.jpg" alt="trekking solo"/></div></div><div style="text-align:center;margin-top:3rem;" class="reveal"><a href="https://www.linkedin.com/in/mranuragchowdhury/" class="btn btn-outline magnetic" target="_blank">Follow me on LinkedIn →</a></div></div></section>
+
+<div class="nature-section"><div class="section-eyebrow reveal" style="color:rgba(255,255,255,0.5);justify-content:center;display:flex;margin-bottom:0.6rem;">Explore</div><h2 class="section-title reveal" style="text-align:center;margin-bottom:0.8rem;">Have a complex AI Problem?</h2><p class="section-sub reveal" style="text-align:center;margin-bottom:2rem;">Let's solve it together. Reach out and let's see what we can build.</p><div style="text-align:center;" class="reveal"><a href="mailto:anurag.chowdhury@msam.christuniversity.in" class="btn btn-outline magnetic">Let's Solve It →</a></div></div>
+
+<section id="contact"><div class="inner" style="text-align:center;"><div class="section-eyebrow reveal" style="justify-content:center;display:flex;margin-bottom:0.8rem;">Get in touch</div><h2 class="contact-title reveal">Let's be social</h2><p class="contact-sub reveal">Open to collaborations, consulting, mentorship, and full-time roles in AI &amp; ML.</p><div class="contact-links reveal-stagger"><a href="https://www.linkedin.com/in/mranuragchowdhury/" class="social-btn" target="_blank">💼 LinkedIn</a><a href="https://github.com/AnuragChowdhury" class="social-btn" target="_blank">🐙 GitHub</a><a href="tel:+919663879626" class="social-btn">📱 +91 96638 79626</a><a href="assets/Anurag_Chowdhury_Resume.pdf" download class="social-btn">📄 Download Resume</a></div><a href="mailto:anurag.chowdhury@msam.christuniversity.in" class="contact-email reveal">anurag.chowdhury@msam.christuniversity.in</a><br/><br/><a href="https://www.linkedin.com/in/mranuragchowdhury/" class="btn btn-dark magnetic reveal" target="_blank">Get connected ↗</a></div></section>
+
+<footer><div class="footer-text">Bangalore, India &nbsp;·&nbsp; All rights reserved, 2025 &nbsp;·&nbsp; Created with ❤️ by Anurag Chowdhury</div><div class="footer-links"><a href="https://www.linkedin.com/in/mranuragchowdhury/" target="_blank">LinkedIn</a><a href="https://github.com/AnuragChowdhury" target="_blank">GitHub</a><a href="mailto:anurag.chowdhury@msam.christuniversity.in">Email</a><a href="assets/Anurag_Chowdhury_Resume.pdf" download>Resume</a></div></footer>
+
+<script>
+  // Inline fallback for rotating tagline — runs independently of script.js
+  // so it works even if the external script is cached/stale.
+  // Note: "Intelligence" is intentionally left OUT of the rotation list
+  // since it's already the fixed word in "...with Intelligence." — avoids
+  // the odd "Intelligence...with Intelligence" repetition on first paint.
+  window.__taglineWords = ["Data", "Patterns", "Models", "Insights", "Algorithms"];
+  window.__taglineStarted = window.__taglineStarted || false;
+  (function () {
+    if (window.__taglineStarted) return;
+    window.__taglineStarted = true;
+    var idx = 0;
+
+    function lockWidth(el, words) {
+      // Measure the widest word using a hidden clone with identical font
+      // styles, then fix that width on the live element so swapping words
+      // never reflows/jumps the surrounding text.
+      var probe = document.createElement('span');
+      var cs = window.getComputedStyle(el);
+      probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;'
+        + 'font-family:' + cs.fontFamily + ';font-size:' + cs.fontSize + ';'
+        + 'font-weight:' + cs.fontWeight + ';letter-spacing:' + cs.letterSpacing + ';';
+      document.body.appendChild(probe);
+      var maxWidth = 0;
+      words.forEach(function (w) {
+        probe.textContent = w;
+        maxWidth = Math.max(maxWidth, probe.getBoundingClientRect().width);
+      });
+      document.body.removeChild(probe);
+      el.style.minWidth = Math.ceil(maxWidth) + 'px';
+    }
+
+    function run() {
+      var el = document.getElementById('rotate-word');
+      if (!el) return;
+      var words = window.__taglineWords;
+      el.textContent = words[0];
+      el.style.display = 'inline-block';
+      el.style.transition = 'opacity .35s ease, transform .35s ease';
+      lockWidth(el, words);
+      setInterval(function () {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(8px)';
+        setTimeout(function () {
+          idx = (idx + 1) % words.length;
+          el.textContent = words[idx];
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 350);
+      }, 2200);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
