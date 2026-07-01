@@ -12,6 +12,8 @@
 <br/>
 
 <!-- SOCIAL BADGES -->
+
+[![Portfolio](https://img.shields.io/badge/PORTFOLIO-VISIT-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=3A3A3A)](https://anuragchowdhury.github.io/AnuragChowdhury/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mranuragchowdhury)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragChowdhury)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919663879626)
