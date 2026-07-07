@@ -1,0 +1,325 @@
+.hero-section .hero-section-container{
+    position: relative;
+}
+
+.hero-section .hero-image{
+    max-width: 90%;
+}
+
+@keyframes floatAnimationNeon {
+    0% {
+      top: 45%;
+      left: 45%;
+    }
+    50% {
+      top: 35%;
+      left: 35%;
+    }
+    100% {
+      top: 45%;
+      left: 45%;
+    }
+}
+
+
+@keyframes floatAnimationGrey {
+    0% {
+      top: 55%;
+      left: 0%;
+    }
+    50% {
+      top: 35%;
+      left: 10%;
+    }
+    100% {
+      top: 55%;
+      left: 0%;
+    }
+}
+
+.circular-blob {
+    position: absolute;
+    width: 55%;
+    height: 61%;
+    opacity: 0.4;
+    border-radius: 50%;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.neon-green {
+    top: 39%;
+    left: 35%;
+    background-color: var(--secondaryColor1);
+    animation: floatAnimationNeon 6s linear infinite;
+}
+
+.grey {
+    top: 46%;
+    left: 0;
+    background-color: var(--secondaryColor4);
+    animation: floatAnimationGrey 6s linear infinite;
+}
+
+/* .hero-section .lottie-player{
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    z-index: -1;
+} */
+
+.hero-section .resume-button{
+    background: var(--secondaryColor3);
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+.typewrite{
+    color: var(--secondaryColor2);
+}
+    .typewrite:hover{
+        color : var(--secondaryColor2);
+        text-decoration: none;
+    }
+
+.hero-section .image-container{
+    position: relative;
+}
+
+.hero-section .image-container .background-svg{
+    position: absolute;
+    top: 5%;
+    z-index: -1;
+    max-width: 90rem;
+    right: 10%;
+}
+
+.hero-section .image-container .additional-details{
+    z-index: 3;
+    position: absolute;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    top: 91%;
+    height: 21%;
+    width: 21%;
+    box-shadow: -5px 5px black;
+    /* box-shadow: var(--boxShadowStyle1); */
+}
+
+.hero-section .image-container .right-side{
+    right: 12%;
+}
+.hero-section .image-container .left-side{
+    left: 11%;
+}
+    .counter, .hero-section .image-container .plus{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+@media only screen and (max-width: 1251px) {
+    .hero-section .image-container .right-side{
+        right: 11%;
+    }
+    .hero-section .image-container .left-side{
+        left: 10%;
+    }
+    .hero-section .image-container .background-svg{
+        right: 5%;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    .hero-section .image-container .additional-details{
+        width: 22%;
+    }
+    .hero-section .image-container .right-side{
+        right: 9%;
+    }
+    .hero-section .image-container .left-side{
+        left: 7%;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .hero-section .image-container .background-svg{
+        top: 0;
+    }
+    .hero-section .image-container .additional-details{
+        height: 25%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .hero-section .image-container .additional-details{
+        width: 25%;
+        height: 26%;
+    }
+    .hero-section .image-container .right-side{
+        right: 3%;
+    }
+    .hero-section .image-container .left-side{
+        left: 2%;
+    }
+    .hero-section .hero-image{
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .hero-section .image-container .additional-details{
+        width: 24%;
+        height: 27%;
+    }
+    .hero-section .image-container .background-svg {
+        bottom: 3rem;
+    }
+     .hero-section .image-container .background-svg svg{
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section .image-container .additional-details{
+        width: 18%;
+        height: 25%;
+    }
+    .hero-section .image-container .right-side{
+        right: 18%;
+    }
+    .hero-section .image-container .left-side{
+        left: 17%;
+    }
+    .hero-section .image-container .background-svg {
+        right: 1rem;
+    }
+    .hero-section .image-container .background-svg svg{
+        width: 45rem;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .hero-section .image-container .right-side{
+        right: 16%;
+    }
+    .hero-section .image-container .left-side{
+        left: 16%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .hero-section .image-container .additional-details{
+        width: 22%;
+    } 
+    .hero-section .image-container .right-side{
+        right: 11%;
+    }
+    .hero-section .image-container .left-side{
+        left: 10%;
+    }
+    .hero-section .image-container .background-svg {
+        right: 0;
+    }
+    .hero-section .image-container .background-svg svg{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width: 585px) {
+    .hero-section .image-container .right-side{
+        right: 9%;
+    }
+    .hero-section .image-container .left-side{
+        left: 9%;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .hero-section .image-container .additional-details{
+        width: 24%;
+    } 
+    .hero-section .image-container .right-side{
+        right: 5%;
+    }
+    .hero-section .image-container .left-side{
+        left: 4%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .hero-section .image-container .additional-details{
+        height: 28%;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .hero-section .image-container .additional-details{
+        height: fit-content;
+    }
+    .hero-section .image-container .additional-details p{
+        display: none;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .hero-section .image-container .background-svg svg{
+        height: 150vw;
+    }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .hero-section .section-subtitle{
+        margin-top: 14%;
+    }
+}
+
+/* Custom overrides for stretched hero image wrapper alignment */
+.hero-section .image-container .hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Elegant limit for large monitors */
+    margin: 0 auto;
+}
+
+.hero-section .image-container .hero-image-wrapper .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-section .image-container .hero-image-wrapper .additional-details {
+    z-index: 3;
+    position: absolute;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    bottom: -22px;
+    height: 86px;
+    width: 110px;
+    box-shadow: -5px 5px black;
+    top: auto !important; /* Override any absolute top settings */
+}
+
+.hero-section .image-container .hero-image-wrapper .right-side {
+    right: -15px !important;
+    left: auto !important;
+}
+
+.hero-section .image-container .hero-image-wrapper .left-side {
+    left: -15px !important;
+    right: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section .image-container .hero-image-wrapper .additional-details {
+        width: 95px !important;
+        height: 75px !important;
+        bottom: -15px !important;
+    }
+    .hero-section .image-container .hero-image-wrapper .right-side {
+        right: -10px !important;
+    }
+    .hero-section .image-container .hero-image-wrapper .left-side {
+        left: -10px !important;
+    }
+}

@@ -1,0 +1,219 @@
+.contact-section .full-time-section{
+    display: flex;
+    align-items: end;
+    position: relative;
+    color: white;
+}
+
+.contact-section .freelance-section{
+    background: var(--primaryColor);
+    color: white;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+    border: 1px solid var(--primaryColor);
+}
+    .contact-section .freelance-section::-webkit-scrollbar { 
+        display: none;
+    }
+
+.contact-section .full-time-section .get-in-touch-button{
+    border: 2px solid var(--secondaryColor1);
+    border-radius: 30px; 
+    text-transform: uppercase;
+}
+
+.contact-section .freelance-section .freelance-card-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4%;
+    column-gap: 2%;
+    grid-auto-rows: minmax(50px, auto);
+    grid-auto-columns: minmax(50px, auto);
+}
+
+    .contact-section .freelance-section .freelance-card-container .freelance-card{
+        border: 1px solid rgb(28, 27, 27);
+        background: linear-gradient(310deg, rgba(35, 33, 33, 0.322), rgba(31, 30, 30, 0.673));
+        border-radius: 10px;
+    }
+
+    .contact-section .freelance-section .freelance-card-container .freelance-card .text-area .freelance-card-title{
+        font-size: 1.3rem;
+    }
+    
+    .contact-section .freelance-section p {
+        color: rgb(200, 200, 200);
+    }
+
+@media only screen and (max-width: 768px){
+    .contact-section .full-time-section {
+        height: 85vh;
+    }      
+}
+
+@media only screen and (max-width: 450px){
+    .contact-section .freelance-card-container p, .contact-section .freelance-card-container button svg{
+        display: none;
+    }    
+}
+
+/* Glassmorphism Contact Modal */
+.contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(6, 6, 12, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.contact-modal-content {
+    background: rgba(18, 18, 28, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px 30px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transform: translateY(-20px);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+    color: white;
+}
+
+.contact-modal.show .contact-modal-content {
+    transform: translateY(0);
+}
+
+.contact-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.contact-modal-close:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-modal-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-modal-content p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none !important;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-item .icon-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.contact-item:hover .icon-wrapper {
+    transform: scale(1.15);
+}
+
+.contact-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease;
+}
+
+.contact-item:hover span {
+    color: white;
+}
+
+/* Brand Customizations */
+.contact-item.whatsapp .icon-wrapper { background: rgba(37, 211, 102, 0.12); border: 1px solid rgba(37, 211, 102, 0.25); }
+.contact-item.whatsapp:hover { border-color: rgba(37, 211, 102, 0.5); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.15); }
+.contact-item.whatsapp svg { fill: #25D366; }
+
+.contact-item.phone .icon-wrapper { background: rgba(0, 191, 255, 0.12); border: 1px solid rgba(0, 191, 255, 0.25); }
+.contact-item.phone:hover { border-color: rgba(0, 191, 255, 0.5); box-shadow: 0 10px 20px rgba(0, 191, 255, 0.15); }
+.contact-item.phone svg { fill: #00BFFF; }
+
+.contact-item.email .icon-wrapper { background: rgba(255, 87, 34, 0.12); border: 1px solid rgba(255, 87, 34, 0.25); }
+.contact-item.email:hover { border-color: rgba(255, 87, 34, 0.5); box-shadow: 0 10px 20px rgba(255, 87, 34, 0.15); }
+.contact-item.email svg { fill: #FF5722; }
+
+.contact-item.linkedin .icon-wrapper { background: rgba(0, 119, 181, 0.12); border: 1px solid rgba(0, 119, 181, 0.25); }
+.contact-item.linkedin:hover { border-color: rgba(0, 119, 181, 0.5); box-shadow: 0 10px 20px rgba(0, 119, 181, 0.15); }
+.contact-item.linkedin svg { fill: #0077B5; }
+
+.contact-item.github .icon-wrapper { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); }
+.contact-item.github:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); }
+.contact-item.github svg { fill: #FFFFFF; }
+
+.contact-item.instagram .icon-wrapper { background: rgba(225, 48, 108, 0.12); border: 1px solid rgba(225, 48, 108, 0.25); }
+.contact-item.instagram:hover { border-color: rgba(225, 48, 108, 0.5); box-shadow: 0 10px 20px rgba(225, 48, 108, 0.15); }
+.contact-item.instagram svg { fill: #E1306C; }
+    

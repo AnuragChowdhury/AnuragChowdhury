@@ -1,0 +1,122 @@
+.testimonial-section {
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.testimonial-section .testimonial-section-text{
+    text-align: center;
+}
+
+.testimonial-section .testimonial-slider-card{
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondaryColor2);
+    height: 20rem;
+    width: 16rem;
+    box-shadow: -5px 5px black;
+}
+
+    .testimonial-section .testimonial-slider-card:hover{
+        box-shadow: -2px 2px black;
+        transition: 0.3s linear;
+    }
+
+    .testimonial-section .testimonial-slider-card .text-section{
+        height: 10rem;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+
+        .testimonial-section .testimonial-slider-card .text-section::-webkit-scrollbar {
+            display: none;
+        }    
+
+.testimonial-section .info-section .image-section{
+    float: left;
+    position: relative;
+}
+.testimonial-section .info-section .user-dp{
+    vertical-align: bottom;
+    border-radius: 100%;
+}
+
+.testimonial-section .info-section .company{
+    bottom: 0;
+    right: -20%;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.testimonial-card-container {
+    padding: 0 4vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.testimonial-card-container::before, .testimonial-card-container::after{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+    .testimonial-card-container::before{
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    }
+
+    .testimonial-card-container::after{
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    }
+  
+    .testimonial-card-container::-webkit-scrollbar {
+        display: none;
+    }
+  
+.testimonial-card-section {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 400px;
+    margin-right: 40px;
+}
+
+.left-button, .right-button{
+    position: absolute;
+    top: 50%;
+    height: 6vh;
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+}
+
+.left-button img, .right-button img{
+    height: 6vh;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+    .left-button:hover img, .right-button:hover img{
+        opacity: 0.6;
+        transition: 0.3s linear;
+    }
+
+
+.right-button{
+    right: 0;
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 768px){
+    .left-button, .right-button{
+        top: 60%;
+    }
+}
