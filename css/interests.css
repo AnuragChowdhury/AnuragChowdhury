@@ -1,0 +1,249 @@
+/* Interests Section Styles */
+.interests-section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.interests-section .circular-blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(130px);
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.interests-section .circular-blob.neon-green {
+    background-color: var(--secondaryColor1);
+    top: 15%;
+    left: -10%;
+}
+
+.interests-section .circular-blob.grey {
+    background-color: #888888;
+    bottom: 15%;
+    right: -10%;
+}
+
+.interests-title-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.interests-title-header h2 {
+    font-family: var(--titleFontFamily);
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: var(--fontColor1);
+    margin-bottom: 1rem;
+}
+
+.interests-title-header p {
+    color: var(--fontColor2);
+    font-size: 1.25rem;
+    font-family: var(--textFontFamily);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Alternate Rows Styling */
+.interest-row {
+    margin-bottom: 6rem;
+    align-items: center;
+}
+
+.interest-row:last-child {
+    margin-bottom: 0;
+}
+
+.interest-text-wrapper {
+    padding: 0 2rem;
+}
+
+.interest-row .interest-num {
+    font-family: 'Space Mono', monospace;
+    color: var(--secondaryColor1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.interest-row h3 {
+    font-family: var(--titleFontFamily);
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--fontColor1);
+    margin-bottom: 1.5rem;
+}
+
+.interest-row p {
+    color: var(--fontColor2);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.interest-row p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Premium Media Card Styling */
+.interests-media-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 12px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Light mode specific background and shadows */
+body:not(.dark-mode) .interests-media-card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Custom shadow colors per activity to create unique visual depth */
+.interests-media-card.trekking-card {
+    box-shadow: -8px 8px 0px #2a3a2e; /* Forest-like dark green/grey shadow */
+}
+
+.interests-media-card.football-card {
+    box-shadow: -8px 8px 0px var(--secondaryColor1); /* Neon green shadow */
+}
+
+.interests-media-card.volleyball-card {
+    box-shadow: -8px 8px 0px #0d0d18; /* Dark obsidian shadow */
+}
+
+body:not(.dark-mode) .interests-media-card.trekking-card {
+    box-shadow: -8px 8px 0px #708090;
+}
+body:not(.dark-mode) .interests-media-card.volleyball-card {
+    box-shadow: -8px 8px 0px #3f3f4f;
+}
+
+.interests-media-card:hover {
+    transform: translate(3px, -3px) scale(1.01);
+}
+
+.interests-media-card.trekking-card:hover {
+    box-shadow: -12px 12px 0px #2a3a2e, 0px 0px 20px rgba(42, 58, 46, 0.2);
+}
+
+.interests-media-card.football-card:hover {
+    box-shadow: -12px 12px 0px var(--secondaryColor1), 0px 0px 20px rgba(57, 255, 20, 0.25);
+}
+
+.interests-media-card.volleyball-card:hover {
+    box-shadow: -12px 12px 0px #0d0d18, 0px 0px 20px rgba(13, 13, 24, 0.3);
+}
+
+/* Viewports with responsive ratios */
+.interests-viewport-trekking,
+.interests-viewport-volleyball {
+    aspect-ratio: 4 / 5; /* Tall portrait style */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+}
+
+.interests-viewport-football {
+    aspect-ratio: 16 / 10; /* Dynamic wide style */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+}
+
+.interests-viewport-trekking img,
+.interests-viewport-football video,
+.interests-viewport-volleyball video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder Styling */
+.interests-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #181824 0%, #0d0d18 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 24px;
+}
+
+.interests-placeholder-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.interests-placeholder-title {
+    font-family: var(--titleFontFamily);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    color: var(--secondaryColor1);
+}
+
+.interests-placeholder-desc {
+    font-size: 0.85rem;
+    color: #a0a0b0;
+    max-width: 280px;
+    line-height: 1.4;
+}
+
+/* Media Subtitles */
+.interests-card-caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--fontColor2);
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .interest-text-wrapper {
+        padding: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .interests-media-card {
+        max-width: 100%;
+    }
+    
+    .interests-title-header {
+        margin-bottom: 3rem;
+    }
+    
+    .interests-title-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .interest-row h3 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,44 @@
+.accordion-section .image-container{
+    height: 100%;
+    width: 100%;
+    color: white;
+    border-radius: var(--borderRadius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-section .accordion-container{
+    width: 100%;
+}
+
+.accordion-section .accordion-container li{
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px dotted rgb(224, 224, 224);
+}
+
+.accordion-section .accordion-container input[type='radio']{
+    display: none;
+}
+
+.accordion-section .accordion-container li label {
+    display: flex;
+    cursor: pointer;
+}
+
+.accordion-section .accordion-container .accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: padding 0.3s;
+}
+
+.accordion-section .accordion-container input[type='radio']:checked + label + .accordion-content{
+    max-height: fit-content;
+    padding: 10px;
+}
+
+.accordion-section .accordion-content-learn-more{
+    background-color: transparent;
+    border-radius: 30px;
+}

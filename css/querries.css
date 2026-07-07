@@ -1,0 +1,8 @@
+.querries-section .accordion-container{
+    display: flex;
+    justify-content: center;
+}
+
+.querries-section .accordion{
+    width: 90%;
+}

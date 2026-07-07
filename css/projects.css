@@ -1,0 +1,183 @@
+.project-section-container{
+    background: var(--primaryColor) ;
+}
+
+.project-section .project-section-text{
+    text-align: left;
+}
+
+.project-section .project-container-1 .card-left{
+    color: white;
+    border-radius: var(--borderRadius);
+    box-shadow: -5px 5px black;
+}
+
+.project-section .card-right{
+    width: 100%;
+}
+
+.porject-container-2 .project-card-container-mobile .card-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100%;  
+}
+
+.project-section .project-container-1 .project-card-text{
+    width: 80%;
+}
+
+.project-section .porject-container-2 .project-card-container, .porject-container-2 .project-card-container-mobile{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.project-section .project-card-container::-webkit-scrollbar, 
+.porject-container-2 .project-card-container-mobile::-webkit-scrollbar{
+    display: none;
+}
+
+.project-section .project-card{
+    min-width: 50vw;
+    height: calc(2vw + 200px);
+    background: rgb(54, 54, 54);
+    border-radius: var(--borderRadius);
+}
+
+    .project-section .project-card-container .project-card .img-container{
+        border-radius: var(--borderRadius);
+    }
+
+    .project-section .project-card-container .project-card img{
+        width: 100%;
+    }
+
+    .project-section .project-card .view-project-button, .project-section .repository-button{
+        border-radius: 5px;
+    }
+
+/* accordions style starts */
+.project-section .card-right li{
+    color: white;
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px dotted rgb(224, 224, 224);
+}
+
+.project-section .card-right input[type='radio']{
+    display: none;
+}
+
+.project-section .card-right li label {
+    display: flex;
+    cursor: pointer;
+}
+
+.project-section .card-right .accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: padding 0.3s;
+}
+
+.project-section .card-right input[type='radio']:checked + label + .accordion-content{
+    max-height: fit-content;
+    padding: 0px 10px;
+}
+
+.project-section .accordion-content-learn-more{
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+/* accordions style starts */
+
+.project-section .project-card-container-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1030px){
+    .project-section .porject-container-2 .project-card-container{
+        display: none;
+    }
+
+    .project-section .project-card-container-mobile{
+        display: flex;
+        color: black;
+    }
+
+    .project-section .project-container-1 .project-card-text{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .project-section .project-card-container-mobile p, .project-section .project-card-container-mobile button{
+        display: none;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .project-section .project-card-container-mobile button{
+        display: none;
+    }
+}
+
+/* Projects Scroll Navigation */
+.project-navigation-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+}
+
+.project-scroll-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-scroll-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.55);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-scroll-btn:active {
+    transform: scale(0.95);
+}
+
+.project-scroll-btn img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+    filter: invert(1);
+    transition: opacity 0.2s ease;
+}
+
+.project-scroll-btn:hover img {
+    opacity: 1;
+}
+
+.project-scroll-btn.project-right img {
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 1030px) {
+    .project-navigation-container {
+        display: none;
+    }
+}
