@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Manrope:&family=Space+Mono&display=swap');
+
+:root{
+    --primaryColor : #0d0d18; 
+    --sectionBackgroundColor : #1f1f1f; 
+    --secondaryColor1 : #39FF14; 
+    --secondaryColor2 : #CCCCCC;
+    --secondaryColor3 : #0d0d18; 
+    --secondaryColor4 : #7c7c7c; 
+    --borderColor : rgba(186, 186, 186, 0.422);
+    --boxShadowStyle1 : rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    --borderRadius : 10px; 
+    --titleFontFamily : 'Manrope', sans-serif;
+    --subtitleFontFamily : 'Bodoni Moda', serif;
+    --textFontFamily : 'Inter', sans-serif;
+    --fontColor1 : black;
+    --fontColor2 : rgb(106, 106, 106);
+    --backgroundColorLayer1: rgb(41, 32, 48);
+    --backgroundColorLayer2: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 1%; 
+    right: 1%;
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: var(--secondaryColor3);
+    color: white; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    font-size: 18px; 
+  }
+  
+  #myBtn:hover {
+    background-color: var(--secondaryColor2); /* Add a dark-grey background on hover */
+  }
+
+body{
+    /* background: var(--primaryColor) !important; */
+    background: #f9f9fb;
+}
+
+.cta-button-style{
+    border: 1px solid var(--secondaryColor3);
+    color: var(--secondaryColor3);
+    background-color: transparent;
+    box-shadow: -5px 5px black;
+}
+
+    .cta-button-style:hover{
+        box-shadow: -2px 2px black;
+        transition: 0.3s linear;
+    }
+
+.dark-button-style{
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor1);
+    color: white;
+    background-color: var(--primaryColor);
+    text-decoration: none;
+}
+    .dark-button-style:hover{
+        box-shadow: rgba(21, 214, 3, 0.3) 0px 0px 0px 3px;
+        transition: 0.3s linear;
+        color: white;
+        text-decoration: none;
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.section-title-header{
+    font-family: var(--titleFontFamily);
+    font-weight: 800;
+    font-size: calc(3.2rem+0.9vw);
+    color: var(--fontColor1);
+}
+
+.section-title{
+    font-family: var(--titleFontFamily);
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--fontColor1);
+}
+
+.section-subtitle{
+    font-family: var(--textFontFamily);
+    color : var(--secondaryColor1);
+    text-transform: uppercase;
+    font-size : 1.5rem;
+}
+
+.section-text{
+    color: var(--fontColor2);
+    font-size: 1.2rem;
+    font-family: var(--textFontFamily);
+}
+
+.main-content{
+    width: 100%;
+}
+
+.flex-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+    .reveal.active {
+        opacity: 1;
+    }
+
+.active.fade-bottom{
+    animation: fade-bottom 0.9s ease-in;
+}
+
+.active.fade-bottom1{
+    animation: fade-bottom 1.1s ease-in;
+}
+
+.active.fade-bottom2{
+    animation: fade-bottom 1.3s ease-in;
+}
+
+.active.fade-left{
+    animation: fade-left 0.9s ease-in;
+}
+.active.fade-right{
+    animation: fade-right 0.9s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+@keyframes fade-right {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

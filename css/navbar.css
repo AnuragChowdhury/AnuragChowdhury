@@ -1,0 +1,106 @@
+/* scroll shadow */
+.add-shadow{ 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.2s ease-in;
+} 
+
+.ai{
+    color: var(--secondaryColor1);
+}
+
+.nav-bar-section{
+    width: 100%;    
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+    margin-top: 0;  
+}
+
+.toggle-button-style{
+    border: none;
+}
+
+.nav-bar-section button:focus{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+nav .navbar-nav .nav-element-style{
+    color: var(--fontColor1);
+    font-weight: 300;
+    font-size: 1.4rem; 
+    text-transform: lowercase;
+    display: inline-block;
+    position: relative;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.nav-element-style:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondaryColor1);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-element-style:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-bar-section .nav-bar-contact-button{
+    /* background-color: var(--primaryColor); */
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #de7d15 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    color: white;
+    border-radius: 5px;
+    /* border: 1px solid var(--primaryColor); */
+    border: none;
+    font-weight: 200;
+}
+    .nav-bar-section .nav-bar-contact-button:hover{
+        color: white;
+    }
+
+@media only screen and (max-width: 400px) {
+    nav .navbar-element-style{
+        font-size: 6vw;
+    }
+}
+@media only screen and (min-width: 400px) {
+    nav .navbar-element-style{
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    nav .navbar-element-style{
+        font-size: 2.6vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav .navbar-element-style{
+        font-size: 2.4vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    nav .navbar-element-style{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    nav .navbar-element-style{
+        font-size: 1.5vw;
+    }
+}

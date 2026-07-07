@@ -1,0 +1,16 @@
+.skills-section .show-more-button{
+    text-transform: capitalize;
+    border-radius: 30px;
+}
+
+.skills-section .skills-section-hero-image{
+    display: flex;
+    justify-content: center;
+}
+
+    .skills-section .skills-section-hero-image img{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+

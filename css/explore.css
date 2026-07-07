@@ -1,0 +1,24 @@
+.explore-section .text-area{
+    width: 55%;
+    text-align: center;
+    color: white;
+}   
+
+.explore-section .button-area{
+    display: flex;
+    justify-content: center;
+}   
+    .explore-section .button-area .explore-button{
+        border-radius: 30px;
+        border: 2px solid var(--secondaryColor1);
+    }   
+
+@media only screen and (max-width: 768px){
+    .explore-section .text-area, .explore-section .button-area{
+        display: none;
+    }  
+
+    .explore-section{
+        height: 40vh;
+    }
+}
