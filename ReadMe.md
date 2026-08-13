@@ -4,7 +4,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:050505,100:0a0a0a&height=120&text=ANURAG%20CHOWDHURY&fontColor=FF6B35&fontSize=42&fontAlignY=55&desc=DATA%20SCIENTIST%20%C2%B7%20ML%20ENGINEER%20%C2%B7%20GRAPH%20AI%20%C2%B7%20SPORTS%20ANALYTICS&descFontColor=C0392B&descSize=13&descAlignY=78&stroke=C0392B&strokeWidth=1" width="100%"/>
 <p align="center">
-  <img src="assets/img_lk_banner.jpg" width="50%" height="650px" alt="Coding Animation"/>
+  <img src="assets/img_lk_banner.jpg" width="80%" height="650px" alt="Coding Animation"/>
 </p>
 
 <!-- TYPING ANIMATION -->
